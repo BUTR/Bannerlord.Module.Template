@@ -134,12 +134,6 @@
       "description":"If specified, enables the Nullable property in the created project file",
       "defaultValue":"false"
     },
-    "skipRestore":{
-      "type":"parameter",
-      "datatype":"bool",
-      "description":"If specified, skips the automatic restore of the project on create.",
-      "defaultValue":"false"
-    },
     "ReferenceHarmony":{
       "type":"computed",
       "value":"(installHarmony == \"hard-dependency\" || installButterLib == \"hard-dependency\" || installUIExtenderEx == \"hard-dependency\" || installMCM == \"hard-dependency\" || installMCM == \"soft-dependency\")"
@@ -174,7 +168,6 @@
   ],
   "postActions":[
     {
-      "condition":"(!skipRestore)",
       "description":"Restore NuGet packages required by this project.",
       "manualInstructions":[
         {

@@ -28,10 +28,6 @@
       "longName": "install-mcm",
       "shortName": ""
     },
-    "skipRestore": {
-      "longName": "no-restore",
-      "shortName": ""
-    },
     "langVersion": {
       "longName": "langVersion",
       "shortName": ""
