@@ -3,7 +3,7 @@
   "order": 0,
   "learnMoreLink": "https://github.com/BUTR/Bannerlord.Module.Template/blob/master/README.md",
   "icon": "icon.png",
-  "symbolInfo": {
+  "symbolInfo": [
     {
       "id": "Framework",
       "isVisible": true
@@ -64,5 +64,5 @@
       },
       "isVisible": true
     }
-  }
+  ]
 }
