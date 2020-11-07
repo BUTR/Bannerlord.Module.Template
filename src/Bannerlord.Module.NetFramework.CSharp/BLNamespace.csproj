@@ -38,8 +38,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Condition="'$(useHarmony)' == 'true'" Include="Lib.Harmony" Version="2.0.4" />
-	<PackageReference Condition="'$(useButterLib)' == 'true'" Include="Bannerlord.ButterLib" Version="1.0.14" />
+    <PackageReference Condition="'$(useHarmony)' == 'true'" Include="Lib.Harmony" Version="2.0.4" IncludeAssets="compile" />
+    <PackageReference Condition="'$(useButterLib)' == 'true'" Include="Bannerlord.ButterLib" Version="1.0.14" IncludeAssets="compile" />
+    <PackageReference Condition="'$(useUIExtenderEx)' == 'true'" Include="Bannerlord.UIExtenderEx" Version="1.0.4" IncludeAssets="compile" />
+    <PackageReference Condition="'$(useMCM)' == 'true'" Include="Bannerlord.MCM" Version="4.1.2" IncludeAssets="compile" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" PrivateAssets="All" />
   </ItemGroup>
 </Project>

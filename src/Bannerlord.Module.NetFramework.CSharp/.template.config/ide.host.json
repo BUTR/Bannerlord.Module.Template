@@ -37,6 +37,20 @@
       "isVisible": true
     },
     {
+      "id": "useUIExtenderEx",
+      "name": {
+        "text": "Use UIExtenderEx"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "useMCM",
+      "name": {
+        "text": "Use Mod Configuration Menu (MCM)"
+      },
+      "isVisible": true
+    },
+    {
       "id": "langVersion",
       "name": {
         "text": "Language Version"

@@ -8,6 +8,18 @@
   <SingleplayerModule value="true" />
   <MultiplayerModule value="false" />
   <DependedModules>
+---#if (useHarmony)
+    <DependedModule Id="Bannerlord.Harmony" />
+---#endif
+---#if (useButterLib)
+    <DependedModule Id="Bannerlord.ButterLib" />
+---#endif
+---#if (useUIExtenderEx)
+    <DependedModule Id="Bannerlord.UIExtenderEx" />
+---#endif
+---#if (useMCM)
+    <DependedModule Id="Bannerlord.MBOptionScreen" />
+---#endif
     <DependedModule Id="Native" />
     <DependedModule Id="SandBoxCore" />
     <DependedModule Id="Sandbox" />

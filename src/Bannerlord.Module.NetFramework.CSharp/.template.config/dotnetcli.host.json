@@ -20,6 +20,14 @@
       "longName": "add-butterlib",
       "shortName": ""
     },
+    "useUIExtenderEx": {
+      "longName": "add-uiextenderex",
+      "shortName": ""
+    },
+    "useMCM": {
+      "longName": "add-mcm",
+      "shortName": ""
+    },
     "skipRestore": {
       "longName": "no-restore",
       "shortName": ""

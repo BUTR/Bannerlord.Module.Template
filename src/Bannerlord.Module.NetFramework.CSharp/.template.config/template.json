@@ -3,10 +3,9 @@
   "author":"BUTR Team",
   "classifications":[
     "Bannerlord"
-	
   ],
   "name":"Mount & Blade 2: Bannerlord Module",
-  "description":"Project template for Mount & Blade 2: Bannerlord. Based on net472.",
+  "description":"Project template for Mount & Blade 2: Bannerlord.",
   "groupIdentity":"Bannerlord.Module.NetFramework",
   "precedence":"5000",
   "identity":"Bannerlord.Module.NetFramework.CSharp",
@@ -24,22 +23,22 @@
       "datatype":"choice",
       "choices":[
         {
-          "choice":"net471",
-          "description":"Target .NET Framework 4.7.1"
+          "choice":"net472",
+          "description":"Target .NET Framework 4.7.2"
         },
         {
           "choice":"netstandard2.0",
           "description":"Target .NET Standard 2.0"
         }
       ],
-      "replaces":"net471",
-      "defaultValue":"net471"
+      "replaces":"net472",
+      "defaultValue":"net472"
     },
     "gameFolder":{
       "type":"parameter",
       "dataType":"string",
       "description":"Path to Bannerlord's game folder",
-      "defaultValue":"C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount &amp; Blade II Bannerlord",
+      "defaultValue":"$(BANNERLORD_GAME_DIR)",
       "replaces":"$(ProjectGameFolder)",
       "forms":{
         "global":[
@@ -64,6 +63,18 @@
       "type":"parameter",
       "dataType":"bool",
       "description":"If specified, adds the Bannerlord.ButterLib package",
+      "defaultValue":"false"
+    },
+    "useUIExtenderEx":{
+      "type":"parameter",
+      "dataType":"bool",
+      "description":"If specified, adds the Bannerlord.UIExtenderEx package",
+      "defaultValue":"false"
+    },
+    "useMCM":{
+      "type":"parameter",
+      "dataType":"bool",
+      "description":"If specified, adds the Bannerlord.MCM package",
       "defaultValue":"false"
     },
     "langVersion":{
@@ -109,5 +120,31 @@
       "actionId":"210D431B-A78B-4D2F-B762-4ED3E3EA9025",
       "continueOnError":true
     }
-  ]
+  ],
+  "SpecialCustomOperations":{
+    "**/*.xml":{
+      "operations":[
+        {
+          "type":"conditional",
+          "configuration":{
+            "if":[
+              "---#if"
+            ],
+            "else":[
+              "---#else"
+            ],
+            "elseif":[
+              "---#elseif",
+              "---#elif"
+            ],
+            "endif":[
+              "---#endif"
+            ],
+            "trim":"true",
+            "wholeLine":"true"
+          }
+        }
+      ]
+    }
+  }
 }
