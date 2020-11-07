@@ -1,0 +1,113 @@
+{
+  "$schema":"http://json.schemastore.org/template",
+  "author":"BUTR Team",
+  "classifications":[
+    "Bannerlord"
+	
+  ],
+  "name":"Mount & Blade 2: Bannerlord Module",
+  "description":"Project template for Mount & Blade 2: Bannerlord. Based on net472.",
+  "groupIdentity":"Bannerlord.Module.NetFramework",
+  "precedence":"5000",
+  "identity":"Bannerlord.Module.NetFramework.CSharp",
+  "shortName":"blmodfx",
+  "tags":{
+    "language":"C#",
+    "type":"project"
+  },
+  "sourceName":"BLNamespace",
+  "preferNameDirectory":"true",
+  "symbols":{
+    "Framework":{
+      "type":"parameter",
+      "description":"The target framework for the project.",
+      "datatype":"choice",
+      "choices":[
+        {
+          "choice":"net471",
+          "description":"Target .NET Framework 4.7.1"
+        },
+        {
+          "choice":"netstandard2.0",
+          "description":"Target .NET Standard 2.0"
+        }
+      ],
+      "replaces":"net471",
+      "defaultValue":"net471"
+    },
+    "gameFolder":{
+      "type":"parameter",
+      "dataType":"string",
+      "description":"Path to Bannerlord's game folder",
+      "defaultValue":"C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mount &amp; Blade II Bannerlord",
+      "replaces":"$(ProjectGameFolder)",
+      "forms":{
+        "global":[
+          "encode"
+        ]
+      }
+    },
+    "moduleName":{
+      "type":"parameter",
+      "dataType":"string",
+      "description":"Module's name",
+      "defaultValue":"$(MSBuildProjectName)",
+      "replaces":"$(ProjectModuleName)"
+    },
+    "useHarmony":{
+      "type":"parameter",
+      "dataType":"bool",
+      "description":"If specified, adds the Harmony package",
+      "defaultValue":"true"
+    },
+    "useButterLib":{
+      "type":"parameter",
+      "dataType":"bool",
+      "description":"If specified, adds the Bannerlord.ButterLib package",
+      "defaultValue":"false"
+    },
+    "langVersion":{
+      "type":"parameter",
+      "datatype":"text",
+      "description":"Sets the LangVersion property in the created project file",
+      "defaultValue":"8.0",
+      "replaces":"$(ProjectLanguageVersion)"
+    },
+    "nullable":{
+      "type":"parameter",
+      "datatype":"bool",
+      "description":"If specified, enables the Nullable property in the created project file",
+      "defaultValue":"false"
+    },
+    "skipRestore":{
+      "type":"parameter",
+      "datatype":"bool",
+      "description":"If specified, skips the automatic restore of the project on create.",
+      "defaultValue":"false"
+    }
+  },
+  "forms":{
+    "encode":{
+      "identifier":"xmlEncode"
+    }
+  },
+  "defaultName":"Bannerlord.Module1",
+  "primaryOutputs":[
+    {
+      "path":"BLNamespace.csproj"
+    }
+  ],
+  "postActions":[
+    {
+      "condition":"(!skipRestore)",
+      "description":"Restore NuGet packages required by this project.",
+      "manualInstructions":[
+        {
+          "text":"Run 'dotnet restore'"
+        }
+      ],
+      "actionId":"210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError":true
+    }
+  ]
+}

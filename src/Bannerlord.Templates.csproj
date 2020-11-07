@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Build">
+    <PackageType>Template</PackageType>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package">
+    <Title>Mount &amp; Blade 2: Bannerlord Module Templates</Title>
+    <Authors>BUTR Team</Authors>
+    <Description>Project template for Mount &amp; Blade 2: Bannerlord.</Description>
+    <Copyright>Copyright © BUTR. All rights Reserved</Copyright>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/BUTR/Bannerlord.Module.Template</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <RepositoryUrl>https://github.com/BUTR/Bannerlord.Module.Template.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>butr bannerlord</PackageTags>
+    <PackageReleaseNotes>https://github.com/BUTR/Bannerlord.Module.Template/releases</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup Label="Files">
+    <Content Include="**\*" Exclude="**\bin\**\*;**\obj\**\*;**\.vs\**\*" />
+    <Compile Remove="**\*" />
+    <None Include="..\resources\icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

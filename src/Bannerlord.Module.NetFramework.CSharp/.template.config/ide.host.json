@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json.schemastore.org/vs-2017.3.host",
+  "order": 0,
+  "learnMoreLink": "https://github.com/BUTR/Bannerlord.Module.Template/blob/master/README.md",
+  "icon": "icon.png",
+  "symbolInfo": {
+    {
+      "id": "Framework",
+      "isVisible": true
+    },
+    {
+      "id": "gameFolder",
+      "name": {
+        "text": "Bannerlord Game Folder Location"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "moduleName",
+      "name": {
+        "text": "Module Name"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "useHarmony",
+      "name": {
+        "text": "Use Harmony"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "useButterLib",
+      "name": {
+        "text": "Use ButterLib"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "langVersion",
+      "name": {
+        "text": "Language Version"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "nullable",
+      "name": {
+        "text": "Use Nullable Feature"
+      },
+      "isVisible": true
+    }
+  }
+}
