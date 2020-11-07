@@ -6,9 +6,9 @@
   ],
   "name":"Mount & Blade 2: Bannerlord Module",
   "description":"Project template for Mount & Blade 2: Bannerlord.",
-  "groupIdentity":"Bannerlord.Module.NetFramework",
+  "groupIdentity":"Bannerlord.Module",
   "precedence":"5000",
-  "identity":"Bannerlord.Module.NetFramework.CSharp",
+  "identity":"Bannerlord.Module.CSharp",
   "shortName":"blmodfx",
   "tags":{
     "language":"C#",
@@ -64,7 +64,7 @@
         },
         {
           "choice":"hard-dependency",
-          "description":"Install Harmony as a hard dependency, referencing it in SubModules.xml"
+          "description":"Install Harmony and reference it in SubModules.xml"
         }
       ],
       "defaultValue":"hard-dependency"
@@ -80,7 +80,7 @@
         },
         {
           "choice":"hard-dependency",
-          "description":"Install Bannerlord.UIExtenderEx as a hard dependency, referencing it in SubModules.xml"
+          "description":"Install Bannerlord.UIExtenderEx and reference it in SubModules.xml"
         }
       ],
       "defaultValue":"do-not-install"
@@ -96,7 +96,7 @@
         },
         {
           "choice":"hard-dependency",
-          "description":"Install Bannerlord.UIExtenderEx as a hard dependency, referencing it in SubModules.xml"
+          "description":"Install Bannerlord.UIExtenderEx and reference it in SubModules.xml"
         }
       ],
       "defaultValue":"do-not-install"
@@ -112,11 +112,11 @@
         },
         {
           "choice":"hard-dependency",
-          "description":"Install Bannerlord.MCM as a hard dependency, referencing it in SubModules.xml"
+          "description":"Install Bannerlord.MCM and reference it in SubModules.xml"
         },
         {
           "choice":"soft-dependency",
-          "description":"Install Bannerlord.MCM as a soft dependency, referencing only ButterLib in SubModules.xml"
+          "description":"Install Bannerlord.MCM and reference only ButterLib in SubModules.xml"
         }
       ],
       "defaultValue":"do-not-install"
