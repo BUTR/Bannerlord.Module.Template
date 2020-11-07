@@ -53,29 +53,73 @@
       "defaultValue":"$(MSBuildProjectName)",
       "replaces":"$(ProjectModuleName)"
     },
-    "useHarmony":{
+    "installHarmony":{
       "type":"parameter",
-      "dataType":"bool",
-      "description":"If specified, adds the Harmony package",
-      "defaultValue":"true"
+      "dataType":"choice",
+      "description":"Specifies if Harmony should be installed",
+      "choices":[
+        {
+          "choice":"do-not-install",
+          "description":"Do not install Harmony"
+        },
+        {
+          "choice":"hard-dependency",
+          "description":"Install Harmony as a hard dependency, referencing it in SubModules.xml"
+        }
+      ],
+      "defaultValue":"hard-dependency"
     },
-    "useButterLib":{
+    "installButterLib":{
       "type":"parameter",
-      "dataType":"bool",
-      "description":"If specified, adds the Bannerlord.ButterLib package",
-      "defaultValue":"false"
+      "dataType":"choice",
+      "description":"Specifies if Bannerlord.ButterLib should be installed",
+      "choices":[
+        {
+          "choice":"do-not-install",
+          "description":"Do not install Bannerlord.ButterLib"
+        },
+        {
+          "choice":"hard-dependency",
+          "description":"Install Bannerlord.UIExtenderEx as a hard dependency, referencing it in SubModules.xml"
+        }
+      ],
+      "defaultValue":"do-not-install"
     },
-    "useUIExtenderEx":{
+    "installUIExtenderEx":{
       "type":"parameter",
-      "dataType":"bool",
-      "description":"If specified, adds the Bannerlord.UIExtenderEx package",
-      "defaultValue":"false"
+      "dataType":"choice",
+      "description":"Specifies if Bannerlord.UIExtenderEx should be installed",
+      "choices":[
+        {
+          "choice":"do-not-install",
+          "description":"Do not install Bannerlord.UIExtenderEx"
+        },
+        {
+          "choice":"hard-dependency",
+          "description":"Install Bannerlord.UIExtenderEx as a hard dependency, referencing it in SubModules.xml"
+        }
+      ],
+      "defaultValue":"do-not-install"
     },
-    "useMCM":{
+    "installMCM":{
       "type":"parameter",
-      "dataType":"bool",
-      "description":"If specified, adds the Bannerlord.MCM package",
-      "defaultValue":"false"
+      "datatype":"choice",
+      "description":"Specifies if Mod Configuration Menu (MCM) should be installed",
+      "choices":[
+        {
+          "choice":"do-not-install",
+          "description":"Do not install Bannerlord.MCM package"
+        },
+        {
+          "choice":"hard-dependency",
+          "description":"Install Bannerlord.MCM as a hard dependency, referencing it in SubModules.xml"
+        },
+        {
+          "choice":"soft-dependency",
+          "description":"Install Bannerlord.MCM as a soft dependency, referencing only ButterLib in SubModules.xml"
+        }
+      ],
+      "defaultValue":"do-not-install"
     },
     "langVersion":{
       "type":"parameter",
@@ -95,6 +139,22 @@
       "datatype":"bool",
       "description":"If specified, skips the automatic restore of the project on create.",
       "defaultValue":"false"
+    },
+    "ReferenceHarmony":{
+      "type":"computed",
+      "value":"(installHarmony == \"hard-dependency\" || installButterLib == \"hard-dependency\" || installUIExtenderEx == \"hard-dependency\" || installMCM == \"hard-dependency\" || installMCM == \"soft-dependency\")"
+    },
+    "ReferenceButterLib":{
+      "type":"computed",
+      "value":"(installButterLib == \"hard-dependency\" || installMCM == \"hard-dependency\" || installMCM == \"soft-dependency\")"
+    },
+    "ReferenceUIExtenderEx":{
+      "type":"computed",
+      "value":"(installUIExtenderEx == \"hard-dependency\" || installMCM == \"hard-dependency\")"
+    },
+    "ReferenceMCM":{
+      "type":"computed",
+      "value":"(installMCM == \"hard-dependency\" || installMCM == \"soft-dependency\")"
     }
   },
   "forms":{
@@ -106,6 +166,10 @@
   "primaryOutputs":[
     {
       "path":"BLNamespace.csproj"
+    },
+    {
+      "condition":"(HostIdentifier != \"dotnetcli\")",
+      "path":"SubModule.cs"
     }
   ],
   "postActions":[
@@ -118,6 +182,18 @@
         }
       ],
       "actionId":"210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError":true
+    },
+    {
+      "condition":"(HostIdentifier != \"dotnetcli\")",
+      "description":"Opens SubModule.cs in the editor",
+      "manualInstructions":[
+        
+      ],
+      "actionId":"84C0DA21-51C8-4541-9940-6CA19AF04EE6",
+      "args":{
+        "files":"1"
+      },
       "continueOnError":true
     }
   ],
@@ -142,6 +218,44 @@
             ],
             "trim":"true",
             "wholeLine":"true"
+          }
+        }
+      ]
+    },
+    "**/*.json":{
+      "flagPrefix":"//",
+      "operations":[
+        {
+          "type":"conditional",
+          "configuration":{
+            "if":[
+              "//#if"
+            ],
+            "else":[
+              "//#else"
+            ],
+            "elseif":[
+              "//#elseif"
+            ],
+            "endif":[
+              "//#endif"
+            ],
+            "actionableIf":[
+              "////#if"
+            ],
+            "actionableElse":[
+              "////#else"
+            ],
+            "actionableElseif":[
+              "////#elseif"
+            ],
+            "actions":[
+              "cStyleUncomment",
+              "cStyleReduceComment"
+            ],
+            "trim":true,
+            "wholeLine":false,
+            "evaluator":"C++"
           }
         }
       ]

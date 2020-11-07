@@ -8,16 +8,16 @@
   <SingleplayerModule value="true" />
   <MultiplayerModule value="false" />
   <DependedModules>
----#if (useHarmony)
+---#if (ReferenceHarmony)
     <DependedModule Id="Bannerlord.Harmony" />
 ---#endif
----#if (useButterLib)
+---#if (ReferenceButterLib)
     <DependedModule Id="Bannerlord.ButterLib" />
 ---#endif
----#if (useUIExtenderEx)
+---#if (ReferenceUIExtenderEx)
     <DependedModule Id="Bannerlord.UIExtenderEx" />
 ---#endif
----#if (useMCM)
+---#if (ReferenceMCM)
     <DependedModule Id="Bannerlord.MBOptionScreen" />
 ---#endif
     <DependedModule Id="Native" />

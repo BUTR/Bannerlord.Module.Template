@@ -23,30 +23,30 @@
       "isVisible": true
     },
     {
-      "id": "useHarmony",
+      "id": "installHarmony",
       "name": {
-        "text": "Use Harmony"
+        "text": "Install Harmony"
       },
       "isVisible": true
     },
     {
-      "id": "useButterLib",
+      "id": "installButterLib",
       "name": {
-        "text": "Use ButterLib"
+        "text": "Install ButterLib"
       },
       "isVisible": true
     },
     {
-      "id": "useUIExtenderEx",
+      "id": "installUIExtenderEx",
       "name": {
-        "text": "Use UIExtenderEx"
+        "text": "Install UIExtenderEx"
       },
       "isVisible": true
     },
     {
-      "id": "useMCM",
+      "id": "installMCM",
       "name": {
-        "text": "Use Mod Configuration Menu (MCM)"
+        "text": "Install Mod Configuration Menu (MCM)"
       },
       "isVisible": true
     },
