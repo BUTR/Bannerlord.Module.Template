@@ -42,5 +42,5 @@ The version of C# that is used. By default, the value is `9.0`, which is the lat
 ### Should I set 'Use Nullable Feature'?
 Read the [docs](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references) on Nullable reference types to decide if you need this feature!  
 ### What are those '$SOMETHING$' variables inside SubModules.xml?
-* **$modulename$** is the varible you passed in `Module Name`. It is the `<ModuleName>` property used in your project file (`.csproj`)
+* **$modulename$** is the varible you passed in `Module Name` when creating the Module. It is the `<ModuleName>` property used in your project file (`.csproj`)
 * **$version$** is the `<Version>` property used in your project file (`.csproj`)
