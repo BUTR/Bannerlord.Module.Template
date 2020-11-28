@@ -28,6 +28,9 @@ You also need to use the new template feature:
 ## FAQ
 ### What 'Target Framework' should I chose?
 If you plan on using Harmony or WinForms, use `.NET Framework 4.7.2`. If not, you can chose `.NET Standard 2.0`.  
+### What are the differenced between 'soft-dependency' and 'hard-dependency?
+**Hard dependency** means that an entry will be added to `SubModules.xml`. Your Module will not include the dependency inside it's `/bin` folder (the .dll). It won't allow the game to run your mod without the dependency installed as a separate Module. This is an important feature to prevent having multiple versions of the same dependency running within the game.  
+**Soft dependency** means that nothing will be added to `SubModules.xml`. Your Module will include the dependency inside it's `/bin` folder (the .dll).
 ### What is this variable 'Bannerlord Game Folder Location'?
 `$(BANNERLORD_GAME_DIR)` is an environment variable. We think that it would be best to set it once on the system instead of hardcoding the game path in the project.  
 Feel free to replace it with a full folder path like `C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord` if you don't want to use the environment variable.  
