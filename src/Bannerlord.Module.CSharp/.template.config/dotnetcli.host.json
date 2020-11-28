@@ -12,19 +12,19 @@
       "longName": "module-name",
       "shortName": ""
     },
-    "installHarmony": {
+    "Install-Harmony": {
       "longName": "install-harmony",
       "shortName": ""
     },
-    "installButterLib": {
+    "Install-ButterLib": {
       "longName": "install-butterlib",
       "shortName": ""
     },
-    "installUIExtenderEx": {
+    "Install-UIExtenderEx": {
       "longName": "install-uiextenderex",
       "shortName": ""
     },
-    "installMCM": {
+    "Install-MCM": {
       "longName": "install-mcm",
       "shortName": ""
     },

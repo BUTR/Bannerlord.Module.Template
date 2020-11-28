@@ -6,7 +6,8 @@
   "symbolInfo": [
     {
       "id": "Framework",
-      "isVisible": true
+      "isVisible": true,
+      "defaultValue": "net472"
     },
     {
       "id": "gameFolder",
@@ -23,31 +24,31 @@
       "isVisible": true
     },
     {
-      "id": "installHarmony",
-      "name": {
-        "text": "Install Harmony"
-      },
+      "id": "Install-Harmony",
+      //"name": {
+      //  "text": "Install Harmony"
+      //},
       "isVisible": true
     },
     {
-      "id": "installButterLib",
-      "name": {
-        "text": "Install ButterLib"
-      },
+      "id": "Install-ButterLib",
+      //"name": {
+      //  "text": "Install ButterLib"
+      //},
       "isVisible": true
     },
     {
-      "id": "installUIExtenderEx",
-      "name": {
-        "text": "Install UIExtenderEx"
-      },
+      "id": "Install-UIExtenderEx",
+      //"name": {
+      //  "text": "Install UIExtenderEx"
+      //},
       "isVisible": true
     },
     {
-      "id": "installMCM",
-      "name": {
-        "text": "Install Mod Configuration Menu (MCM)"
-      },
+      "id": "Install-MCM",
+      //"name": {
+      //  "text": "Install Mod Configuration Menu (MCM)"
+      //},
       "isVisible": true
     },
     {
