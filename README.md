@@ -28,7 +28,7 @@ You also need to use the new template feature:
 ## FAQ
 ### What 'Target Framework' should I chose?
 If you plan on using Harmony or WinForms, use `.NET Framework 4.7.2`. If not, you can chose `.NET Standard 2.0`.  
-### What are the differenced between 'soft-dependency' and 'hard-dependency?
+### What are the differences between 'soft-dependency' and 'hard-dependency?
 **Hard dependency** means that an entry will be added to `SubModules.xml`. Your Module will not include the dependency inside it's `/bin` folder (the .dll). It won't allow the game to run your mod without the dependency installed as a separate Module. This is an important feature to prevent having multiple versions of the same dependency running within the game.  
 **Soft dependency** means that nothing will be added to `SubModules.xml`. Your Module will include the dependency inside it's `/bin` folder (the .dll).
 ### What is this variable 'Bannerlord Game Folder Location'?
@@ -42,6 +42,7 @@ The version of C# that is used. By default, the value is `9.0`, which is the lat
 ### Should I set 'Use Nullable Feature'?
 Read the [docs](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references) on Nullable reference types to decide if you need this feature!  
 ### What are those '$SOMETHING$' variables inside SubModules.xml?
+Those are variables that will be replaced with real values when the project is built.  
 * **$modulename$** is the varible you passed in `Module Name` when creating the Module. It is the `<ModuleName>` property used in your project file (`.csproj`)
 * **$version$** is the `<Version>` property used in your project file (`.csproj`)
 ### What is the '\_Module' folder inside the project?
