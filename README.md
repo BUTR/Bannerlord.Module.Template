@@ -1,6 +1,11 @@
 # Bannerlord Module Template
-
- [![Bannerlord.Templates NuGet Package](https://img.shields.io/nuget/v/Bannerlord.Templates.svg)](https://www.nuget.org/packages/Bannerlord.Templates/)
+<p align="center">
+   <a href="https://www.nuget.org/packages/Bannerlord.Templates" alt="NuGet Bannerlord.MCM">
+   <img src="https://img.shields.io/nuget/v/Bannerlord.Templates.svg?label=NuGet%20Bannerlord.Templates&colorB=blue" /></a>
+   </br>
+   <!--<img src="https://media.discordapp.net/attachments/555699650452258816/782373583421964318/image.png" width="800">-->
+   <img src="https://media.discordapp.net/attachments/555699650452258816/782373622954065950/image.png" width="800">
+</p>
 
 ## Installation
 1. Install the latest [.NET Core SDK](https://dot.net).
@@ -16,7 +21,9 @@
 ### Creating via Visual Studio
 You need to have at least an 16.8.x version create the template!  
 You also need to use the new template feature:  
-![Image](https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2020/09/clitemplates-option-enable.png)
+<p>
+   <img src="https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2020/09/clitemplates-option-enable.png" width="600">
+</p>
 
 ## FAQ
 ### What 'Target Framework' should I chose?
