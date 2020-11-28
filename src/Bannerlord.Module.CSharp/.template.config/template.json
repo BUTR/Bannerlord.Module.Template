@@ -125,7 +125,7 @@
       "type":"parameter",
       "datatype":"text",
       "description":"Sets the LangVersion property in the created project file",
-      "defaultValue":"8.0",
+      "defaultValue":"9.0",
       "replaces":"$(ProjectLanguageVersion)"
     },
     "nullable":{
