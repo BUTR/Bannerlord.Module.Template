@@ -48,4 +48,4 @@ Read the [docs](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-referenc
 It is the root Module folder that copies everything that is placed there inside the output.
 ### I build my project and a folder with my Module was created in `GAMEPATH/Modules`!
 This is one of the features that this project template provides.  
-If the `<ModuleName>` and `<GameFolder>` properties are valid, our Module will be copied in the game's `/Modules` folder automatically. You can test your Module without the need of creating a script that will move everything inside the game's Modules folder.
+If the `<ModuleName>` and `<GameFolder>` properties are valid, your Module will be copied in the game's `/Modules` folder automatically. You can test your Module without the need of creating a script that will move everything inside the game's Modules folder.
