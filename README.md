@@ -2,9 +2,9 @@
 <p align="center">
    <a href="https://www.nuget.org/packages/Bannerlord.Templates" alt="NuGet Bannerlord.MCM">
    <img src="https://img.shields.io/nuget/v/Bannerlord.Templates.svg?label=NuGet%20Bannerlord.Templates&colorB=blue" /></a>
-   </br>
-   <!--<img src="https://media.discordapp.net/attachments/555699650452258816/782373583421964318/image.png" width="800">-->
-   <img src="https://media.discordapp.net/attachments/555699650452258816/782373622954065950/image.png" width="800">
+</p>
+<p>
+   <img src="https://cdn.discordapp.com/attachments/555699650452258816/782380466727944192/unknown.png" width="800">
 </p>
 
 ## Installation
