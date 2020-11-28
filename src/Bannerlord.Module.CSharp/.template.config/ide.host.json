@@ -24,52 +24,46 @@
       "isVisible": true
     },
     {
-      "id": "installHarmony",
-      "name": {
-        "text": "Install Harmony"
-      },
-      "isVisible": true,
-      "defaultValue": "hard-dependency"
+      "id": "Install-Harmony",
+      //"name": {
+      //  "text": "Install Harmony"
+      //},
+      "isVisible": true
     },
     {
-      "id": "installButterLib",
-      "name": {
-        "text": "Install ButterLib"
-      },
-      "isVisible": true,
-      "defaultValue": "do-not-install"
+      "id": "Install-ButterLib",
+      //"name": {
+      //  "text": "Install ButterLib"
+      //},
+      "isVisible": true
     },
     {
-      "id": "installUIExtenderEx",
-      "name": {
-        "text": "Install UIExtenderEx"
-      },
-      "isVisible": true,
-      "defaultValue": "do-not-install"
+      "id": "Install-UIExtenderEx",
+      //"name": {
+      //  "text": "Install UIExtenderEx"
+      //},
+      "isVisible": true
     },
     {
-      "id": "installMCM",
-      "name": {
-        "text": "Install Mod Configuration Menu (MCM)"
-      },
-      "isVisible": true,
-      "defaultValue": "do-not-install"
+      "id": "Install-MCM",
+      //"name": {
+      //  "text": "Install Mod Configuration Menu (MCM)"
+      //},
+      "isVisible": true
     },
     {
       "id": "langVersion",
       "name": {
         "text": "Language Version"
       },
-      "isVisible": true,
-      "defaultValue": "9.0"
+      "isVisible": true
     },
     {
       "id": "nullable",
       "name": {
         "text": "Use Nullable Feature"
       },
-      "isVisible": true,
-      "defaultValue": "false"
+      "isVisible": true
     }
   ]
 }
