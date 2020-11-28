@@ -6,7 +6,8 @@
   "symbolInfo": [
     {
       "id": "Framework",
-      "isVisible": true
+      "isVisible": true,
+      "defaultValue": "net472"
     },
     {
       "id": "gameFolder",
@@ -27,42 +28,48 @@
       "name": {
         "text": "Install Harmony"
       },
-      "isVisible": true
+      "isVisible": true,
+      "defaultValue": "hard-dependency"
     },
     {
       "id": "installButterLib",
       "name": {
         "text": "Install ButterLib"
       },
-      "isVisible": true
+      "isVisible": true,
+      "defaultValue": "do-not-install"
     },
     {
       "id": "installUIExtenderEx",
       "name": {
         "text": "Install UIExtenderEx"
       },
-      "isVisible": true
+      "isVisible": true,
+      "defaultValue": "do-not-install"
     },
     {
       "id": "installMCM",
       "name": {
         "text": "Install Mod Configuration Menu (MCM)"
       },
-      "isVisible": true
+      "isVisible": true,
+      "defaultValue": "do-not-install"
     },
     {
       "id": "langVersion",
       "name": {
         "text": "Language Version"
       },
-      "isVisible": true
+      "isVisible": true,
+      "defaultValue": "9.0"
     },
     {
       "id": "nullable",
       "name": {
         "text": "Use Nullable Feature"
       },
-      "isVisible": true
+      "isVisible": true,
+      "defaultValue": "false"
     }
   ]
 }
