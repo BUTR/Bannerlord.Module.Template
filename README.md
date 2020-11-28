@@ -44,7 +44,7 @@ Read the [docs](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-referenc
 ### What are those '$SOMETHING$' variables inside SubModules.xml?
 * **$modulename$** is the varible you passed in `Module Name` when creating the Module. It is the `<ModuleName>` property used in your project file (`.csproj`)
 * **$version$** is the `<Version>` property used in your project file (`.csproj`)
-### What is the \_Module folder inside the project?
+### What is the '\_Module' folder inside the project?
 It is the root Module folder that copies everything that is placed there inside the output.
 ### I build my project and a folder with my Module was created in `GAMEPATH/Modules`!
 This is one of the features that this project template provides.  
