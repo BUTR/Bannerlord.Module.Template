@@ -53,7 +53,7 @@
       "defaultValue":"$(MSBuildProjectName)",
       "replaces":"$(ProjectModuleName)"
     },
-    "installHarmony":{
+    "Install-Harmony":{
       "type":"parameter",
       "dataType":"choice",
       "description":"Specifies if Harmony should be installed",
@@ -69,7 +69,7 @@
       ],
       "defaultValue":"hard-dependency"
     },
-    "installButterLib":{
+    "Install-ButterLib":{
       "type":"parameter",
       "dataType":"choice",
       "description":"Specifies if Bannerlord.ButterLib should be installed",
@@ -85,7 +85,7 @@
       ],
       "defaultValue":"do-not-install"
     },
-    "installUIExtenderEx":{
+    "Install-UIExtenderEx":{
       "type":"parameter",
       "dataType":"choice",
       "description":"Specifies if Bannerlord.UIExtenderEx should be installed",
@@ -101,7 +101,7 @@
       ],
       "defaultValue":"do-not-install"
     },
-    "installMCM":{
+    "Install-MCM":{
       "type":"parameter",
       "datatype":"choice",
       "description":"Specifies if Mod Configuration Menu (MCM) should be installed",
@@ -136,19 +136,19 @@
     },
     "ReferenceHarmony":{
       "type":"computed",
-      "value":"(installHarmony == \"hard-dependency\" || installButterLib == \"hard-dependency\" || installUIExtenderEx == \"hard-dependency\" || installMCM == \"hard-dependency\" || installMCM == \"soft-dependency\")"
+      "value":"(Install-Harmony == \"hard-dependency\" || Install-ButterLib == \"hard-dependency\" || Install-UIExtenderEx == \"hard-dependency\" || Install-MCM == \"hard-dependency\" || Install-MCM == \"soft-dependency\")"
     },
     "ReferenceButterLib":{
       "type":"computed",
-      "value":"(installButterLib == \"hard-dependency\" || installMCM == \"hard-dependency\" || installMCM == \"soft-dependency\")"
+      "value":"(Install-ButterLib == \"hard-dependency\" || Install-MCM == \"hard-dependency\" || Install-MCM == \"soft-dependency\")"
     },
     "ReferenceUIExtenderEx":{
       "type":"computed",
-      "value":"(installUIExtenderEx == \"hard-dependency\" || installMCM == \"hard-dependency\")"
+      "value":"(Install-UIExtenderEx == \"hard-dependency\" || Install-MCM == \"hard-dependency\")"
     },
     "ReferenceMCM":{
       "type":"computed",
-      "value":"(installMCM == \"hard-dependency\" || installMCM == \"soft-dependency\")"
+      "value":"(Install-MCM == \"hard-dependency\" || Install-MCM == \"soft-dependency\")"
     }
   },
   "forms":{
