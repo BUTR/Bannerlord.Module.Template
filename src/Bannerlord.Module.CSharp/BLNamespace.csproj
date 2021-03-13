@@ -43,6 +43,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="Nullable" Version="1.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Condition="'$(ReferenceButterLib)' == 'true'" Include="Bannerlord.ButterLib" Version="1.0.21" IncludeAssets="compile" />
     <PackageReference Condition="'$(ReferenceUIExtenderEx)' == 'true'" Include="Bannerlord.UIExtenderEx" Version="2.1.1" IncludeAssets="compile" />
     <PackageReference Condition="'$(ReferenceMCM)' == 'true'" Include="Bannerlord.MCM" Version="4.3.4" IncludeAssets="compile" />
