@@ -47,13 +47,13 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="Lib.Harmony" Version="2.0.4" IncludeAssets="compile" />
-    <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="Harmony.Extensions" Version="2.0.0.5">
+    <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="Harmony.Extensions" Version="2.0.0.39">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Condition="'$(ReferenceButterLib)' == 'true'" Include="Bannerlord.ButterLib" Version="1.0.21" IncludeAssets="compile" />
-    <PackageReference Condition="'$(ReferenceUIExtenderEx)' == 'true'" Include="Bannerlord.UIExtenderEx" Version="2.1.1" IncludeAssets="compile" />
-    <PackageReference Condition="'$(ReferenceMCM)' == 'true'" Include="Bannerlord.MCM" Version="4.3.4" IncludeAssets="compile" />
+    <PackageReference Condition="'$(ReferenceButterLib)' == 'true'" Include="Bannerlord.ButterLib" Version="1.0.23" IncludeAssets="compile" />
+    <PackageReference Condition="'$(ReferenceUIExtenderEx)' == 'true'" Include="Bannerlord.UIExtenderEx" Version="2.1.5" IncludeAssets="compile" />
+    <PackageReference Condition="'$(ReferenceMCM)' == 'true'" Include="Bannerlord.MCM" Version="4.3.10" IncludeAssets="compile" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>compile</IncludeAssets>
