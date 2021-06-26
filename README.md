@@ -19,7 +19,7 @@
 3. Run `dotnet new blmodfx --name "Bannerlord.MyModule"` along with any other custom options to create a project from the template.
 
 ### Creating via Visual Studio
-You need to have at least an 16.8.x version create the template!  
+You need to have at least an 16.8.x version to create the template!  
 You also need to use the new template feature:  
 <p>
    <img src="https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2020/09/clitemplates-option-enable.png" width="600">
