@@ -35,7 +35,7 @@ If you plan on using Harmony or WinForms, use `.NET Framework 4.7.2`. If not, yo
 `$(BANNERLORD_GAME_DIR)` is an environment variable. We think that it would be best to set it once on the system instead of hardcoding the game path in the project.  
 Feel free to replace it with a full folder path like `C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord` if you don't want to use the environment variable.  
 ### What is this variable 'Module Name'?
-`$(MSBuildProjectName)` is a MSBuild built-in variable that return the file name of the project file without the file name extension; for example, `Bannerlord.Module1`.  
+`$(MSBuildProjectName)` is a MSBuild built-in variable that returns the file name of the project file without the file name extension; for example, `Bannerlord.Module1`.  
 If you don't plan on keeping the Module folder name the same as the project that is being created, override it.  
 ### What is this variable 'Language Version'?
 The version of C# that is used. By default, the value is `9.0`, which is the latest currently.  
