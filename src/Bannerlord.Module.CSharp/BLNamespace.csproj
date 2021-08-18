@@ -54,7 +54,7 @@
     <PackageReference Condition="'$(ReferenceButterLib)' == 'true'" Include="Bannerlord.ButterLib" Version="1.0.24" IncludeAssets="compile" />
     <PackageReference Condition="'$(ReferenceUIExtenderEx)' == 'true'" Include="Bannerlord.UIExtenderEx" Version="2.1.6" IncludeAssets="compile" />
     <PackageReference Condition="'$(ReferenceMCM)' == 'true'" Include="Bannerlord.MCM" Version="4.3.13" IncludeAssets="compile" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>compile</IncludeAssets>
     </PackageReference>
