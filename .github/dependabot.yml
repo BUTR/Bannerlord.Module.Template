@@ -4,3 +4,8 @@ updates:
     directory: "/src/"
     schedule:
       interval: "daily"
+  - package-ecosystem: "nuget"
+    directory: "/src/Bannerlord.Module.CSharp/"
+    schedule:
+      interval: "daily"
+      
