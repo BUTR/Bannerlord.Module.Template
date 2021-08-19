@@ -23,22 +23,10 @@ jobs:
     name: Build and Publish
     runs-on: ubuntu-latest
     steps:
-    - name: 'Checkout'
-      uses: actions/checkout@v2
+    - name: Setup
+      uses: butr/actions-common-setup@v1.1
       with:
-        fetch-depth: 0
-
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@master
-      with:
-        dotnet-version: 3.1.x
-
-    - name: Setup BUTR GPR
-      uses: actions/setup-dotnet@master
-      with:
-        source-url: https://nuget.pkg.github.com/BUTR/index.json
-      env:
-        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        github-token: ${{secrets.GITHUB_TOKEN}}
 
     - name: Pack
       run: dotnet pack src/Bannerlord.Templates.csproj -c Release -o ./packages
