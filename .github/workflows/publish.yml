@@ -24,13 +24,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:       
     - name: Setup
-      uses: butr/actions-common-setup@v1.2
+      uses: butr/actions-common-setup@v1.3
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
-
-    - name: 'Checkout'
-      uses: actions/checkout@v2
-      with:
         fetch-depth: 0
 
     - name: Pack
