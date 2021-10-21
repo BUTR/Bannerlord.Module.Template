@@ -12,20 +12,28 @@
       "longName": "module-name",
       "shortName": ""
     },
-    "Install-Harmony": {
+    "InstallHarmony": {
       "longName": "install-harmony",
       "shortName": ""
     },
-    "Install-ButterLib": {
+    "InstallButterLib": {
       "longName": "install-butterlib",
       "shortName": ""
     },
-    "Install-UIExtenderEx": {
+    "InstallUIExtenderEx": {
       "longName": "install-uiextenderex",
       "shortName": ""
     },
-    "Install-MCM": {
+    "InstallMCM": {
       "longName": "install-mcm",
+      "shortName": ""
+    },
+    "InstallReferenceAssemblies": {
+      "longName": "install-reference-assemblies",
+      "shortName": ""
+    },
+    "gameVersion": {
+      "longName": "gameVersion",
       "shortName": ""
     },
     "langVersion": {
@@ -34,6 +42,10 @@
     },
     "nullable": {
       "longName": "nullable",
+      "shortName": ""
+    },
+    "skipRestore": {
+      "longName": "no-restore",
       "shortName": ""
     }
   },

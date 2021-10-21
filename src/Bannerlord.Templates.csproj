@@ -1,15 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup Label="Build">
+    <TargetFramework>net5.0</TargetFramework>
     <PackageType>Template</PackageType>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
+    <IncludeSymbols>false</IncludeSymbols>
     <ContentTargetFolders>content</ContentTargetFolders>
-    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <!-- This project has no .NET assemblies, so disable the warning for that -->
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Label="Package">
+    <PackageId>Bannerlord.Templates</PackageId>
     <Title>Mount &amp; Blade 2: Bannerlord Module Templates</Title>
     <Authors>BUTR Team</Authors>
     <Description>Project template for Mount &amp; Blade 2: Bannerlord.</Description>

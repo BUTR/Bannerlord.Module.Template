@@ -1,182 +1,229 @@
 {
-  "$schema":"http://json.schemastore.org/template",
-  "author":"BUTR Team",
-  "classifications":[
+  "$schema": "http://json.schemastore.org/template",
+  "author": "BUTR Team",
+  "classifications": [
     "Bannerlord",
     "Games"
   ],
-  "name":"Mount & Blade 2: Bannerlord Module",
-  "description":"Project template for Mount & Blade 2: Bannerlord.",
-  "groupIdentity":"Bannerlord.Module",
-  "precedence":"5000",
-  "identity":"Bannerlord.Module.CSharp",
-  "shortName":"blmodfx",
-  "tags":{
-    "language":"C#",
-    "type":"project"
+  "name": "Mount & Blade 2: Bannerlord Module",
+  "generatorVersions": "[1.0.0.0-*)",
+  "description": "Project template for Mount & Blade 2: Bannerlord.",
+  "groupIdentity": "Bannerlord.Module",
+  "precedence": "5000",
+  "identity": "Bannerlord.Module.CSharp",
+  "shortName": "blmodfx",
+  "tags": {
+    "language": "C#",
+    "type": "project"
   },
-  "sourceName":"BLNamespace",
-  "preferNameDirectory":"true",
-  "symbols":{
-    "Framework":{
-      "type":"parameter",
-      "description":"The target framework for the project.",
-      "datatype":"choice",
-      "choices":[
+  "sourceName": "BLNamespace",
+  "preferNameDirectory": true,
+  "guids": [
+    "84889846-e8dd-4c24-a8ee-0099a0573895"
+  ],
+  "symbols": {
+    "Framework": {
+      "type": "parameter",
+      "description": "The target framework for the project.",
+      "datatype": "choice",
+      "choices": [
         {
-          "choice":"net472",
-          "description":"Target .NET Framework 4.7.2"
+          "choice": "net472",
+          "description": "Target .NET Framework 4.7.2"
         },
         {
-          "choice":"netstandard2.0",
-          "description":"Target .NET Standard 2.0"
+          "choice": "netstandard2.0",
+          "description": "Target .NET Standard 2.0"
         }
       ],
-      "replaces":"net472",
-      "defaultValue":"net472"
+      "replaces": "net472",
+      "defaultValue": "net472"
     },
-    "gameFolder":{
-      "type":"parameter",
-      "dataType":"string",
-      "description":"Path to Bannerlord's game folder",
-      "defaultValue":"$(BANNERLORD_GAME_DIR)",
-      "replaces":"$(ProjectGameFolder)",
-      "forms":{
-        "global":[
+    "gameFolder": {
+      "type": "parameter",
+      "dataType": "string",
+      "description": "Path to Bannerlord's game folder",
+      "defaultValue": "$(BANNERLORD_GAME_DIR)",
+      "replaces": "$(ProjectGameFolder)",
+      "forms": {
+        "global": [
           "encode"
         ]
       }
     },
-    "moduleName":{
-      "type":"parameter",
-      "dataType":"string",
-      "description":"Module's name",
-      "defaultValue":"$(MSBuildProjectName)",
-      "replaces":"$(ProjectModuleName)"
+    "moduleName": {
+      "type": "parameter",
+      "dataType": "string",
+      "description": "Module's name",
+      "defaultValue": "$(MSBuildProjectName)",
+      "replaces": "$(ProjectModuleName)"
     },
-    "Install-Harmony":{
-      "type":"parameter",
-      "dataType":"choice",
-      "description":"Specifies if Harmony should be installed",
-      "choices":[
+    "InstallHarmony": {
+      "type": "parameter",
+      "dataType": "choice",
+      "description": "Specifies if Harmony should be installed",
+      "choices": [
         {
-          "choice":"do-not-install",
-          "description":"Do not install Harmony"
+          "choice": "do-not-install",
+          "description": "Do not install Harmony"
         },
         {
-          "choice":"hard-dependency",
-          "description":"Install Harmony and reference it in SubModules.xml"
+          "choice": "hard-dependency",
+          "description": "Install Harmony and reference it in SubModules.xml"
         }
       ],
-      "defaultValue":"hard-dependency"
+      "defaultValue": "hard-dependency"
     },
-    "Install-ButterLib":{
-      "type":"parameter",
-      "dataType":"choice",
-      "description":"Specifies if Bannerlord.ButterLib should be installed",
-      "choices":[
+    "InstallButterLib": {
+      "type": "parameter",
+      "dataType": "choice",
+      "description": "Specifies if Bannerlord.ButterLib should be installed",
+      "choices": [
         {
-          "choice":"do-not-install",
-          "description":"Do not install Bannerlord.ButterLib"
+          "choice": "do-not-install",
+          "description": "Do not install Bannerlord.ButterLib"
         },
         {
-          "choice":"hard-dependency",
-          "description":"Install Bannerlord.UIExtenderEx and reference it in SubModules.xml"
+          "choice": "hard-dependency",
+          "description": "Install Bannerlord.UIExtenderEx and reference it in SubModules.xml"
         }
       ],
-      "defaultValue":"do-not-install"
+      "defaultValue": "do-not-install"
     },
-    "Install-UIExtenderEx":{
-      "type":"parameter",
-      "dataType":"choice",
-      "description":"Specifies if Bannerlord.UIExtenderEx should be installed",
-      "choices":[
+    "InstallUIExtenderEx": {
+      "type": "parameter",
+      "dataType": "choice",
+      "description": "Specifies if Bannerlord.UIExtenderEx should be installed",
+      "choices": [
         {
-          "choice":"do-not-install",
-          "description":"Do not install Bannerlord.UIExtenderEx"
+          "choice": "do-not-install",
+          "description": "Do not install Bannerlord.UIExtenderEx"
         },
         {
-          "choice":"hard-dependency",
-          "description":"Install Bannerlord.UIExtenderEx and reference it in SubModules.xml"
+          "choice": "hard-dependency",
+          "description": "Install Bannerlord.UIExtenderEx and reference it in SubModules.xml"
         }
       ],
-      "defaultValue":"do-not-install"
+      "defaultValue": "do-not-install"
     },
-    "Install-MCM":{
-      "type":"parameter",
-      "datatype":"choice",
-      "description":"Specifies if Mod Configuration Menu (MCM) should be installed",
-      "choices":[
+    "InstallMCM": {
+      "type": "parameter",
+      "datatype": "choice",
+      "description": "Specifies if Mod Configuration Menu (MCM) should be installed",
+      "choices": [
         {
-          "choice":"do-not-install",
-          "description":"Do not install Bannerlord.MCM package"
+          "choice": "do-not-install",
+          "description": "Do not install Bannerlord.MCM"
         },
         {
-          "choice":"hard-dependency",
-          "description":"Install Bannerlord.MCM and reference it in SubModules.xml"
+          "choice": "hard-dependency",
+          "description": "Install Bannerlord.MCM and reference it in SubModules.xml"
         },
         {
-          "choice":"soft-dependency",
-          "description":"Install Bannerlord.MCM and reference only ButterLib in SubModules.xml"
+          "choice": "soft-dependency",
+          "description": "Install Bannerlord.MCM and reference only ButterLib in SubModules.xml"
         }
       ],
-      "defaultValue":"do-not-install"
+      "defaultValue": "do-not-install"
     },
-    "langVersion":{
-      "type":"parameter",
-      "datatype":"text",
-      "description":"Sets the LangVersion property in the created project file",
-      "defaultValue":"9.0",
-      "replaces":"$(ProjectLanguageVersion)"
+    "InstallReferenceAssemblies": {
+      "type": "parameter",
+      "datatype": "choice",
+      "description": "Specifies if the reference assemblies should be used instead of referencing the game assemblies from the game folder to compile against",
+      "choices": [
+        {
+          "choice": "do-not-install",
+          "description": "Do not install Reference Assemblies. Assemblies from the game's folder will be used instead"
+        },
+        {
+          "choice": "install",
+          "description": "Install Reference Assemblies"
+        }
+      ],
+      "defaultValue": "do-not-install"
     },
-    "nullable":{
-      "type":"parameter",
-      "datatype":"bool",
-      "description":"If specified, enables the Nullable property in the created project file",
-      "defaultValue":"false"
+    "gameVersion": {
+      "type": "parameter",
+      "dataType": "string",
+      "description": "Version of Bannerlord that Reference Assemblies will use",
+      "defaultValue": "1.6.4",
+      "replaces": "$(ProjectGameVersion)",
+      "forms": {
+        "global": [
+          "encode"
+        ]
+      }
     },
-    "ReferenceHarmony":{
-      "type":"computed",
-      "value":"(Install-Harmony == \"hard-dependency\" || Install-ButterLib == \"hard-dependency\" || Install-UIExtenderEx == \"hard-dependency\" || Install-MCM == \"hard-dependency\" || Install-MCM == \"soft-dependency\")"
+    "langVersion": {
+      "type": "parameter",
+      "datatype": "text",
+      "description": "Sets the LangVersion property in the created project file",
+      "defaultValue": "10.0",
+      "replaces": "$(ProjectLanguageVersion)"
     },
-    "ReferenceButterLib":{
-      "type":"computed",
-      "value":"(Install-ButterLib == \"hard-dependency\" || Install-MCM == \"hard-dependency\" || Install-MCM == \"soft-dependency\")"
+    "nullable": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "If specified, enables the Nullable property in the created project file",
+      "defaultValue": "false"
     },
-    "ReferenceUIExtenderEx":{
-      "type":"computed",
-      "value":"(Install-UIExtenderEx == \"hard-dependency\" || Install-MCM == \"hard-dependency\")"
+    "skipRestore": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "If specified, skips the automatic restore of the project on create.",
+      "defaultValue": "false"
     },
-    "ReferenceMCM":{
-      "type":"computed",
-      "value":"(Install-MCM == \"hard-dependency\" || Install-MCM == \"soft-dependency\")"
+    "ReferenceHarmony": {
+      "type": "computed",
+      "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\")"
+    },
+    "ReferenceButterLib": {
+      "type": "computed",
+      "value": "(InstallButterLib == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\")"
+    },
+    "ReferenceUIExtenderEx": {
+      "type": "computed",
+      "value": "(InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\")"
+    },
+    "ReferenceMCM": {
+      "type": "computed",
+      "value": "(InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\")"
+    },
+    "ReferenceReferenceAssemblies": {
+      "type": "computed",
+      "value": "(InstallReferenceAssemblies == \"install\")"
+    },
+    "ReferenceGameAssemblies": {
+      "type": "computed",
+      "value": "(InstallReferenceAssemblies == \"do-not-install\")"
     }
   },
-  "forms":{
-    "encode":{
-      "identifier":"xmlEncode"
+  "forms": {
+    "encode": {
+      "identifier": "xmlEncode"
     }
   },
-  "defaultName":"Bannerlord.Module1",
-  "primaryOutputs":[
+  "defaultName": "Bannerlord.Module1",
+  "primaryOutputs": [
     {
-      "path":"BLNamespace.csproj"
+      "path": "BLNamespace.csproj"
     },
     {
       "condition":"(HostIdentifier != \"dotnetcli\")",
       "path":"SubModule.cs"
     }
   ],
-  "postActions":[
+  "postActions": [
     {
-      "description":"Restore NuGet packages required by this project.",
-      "manualInstructions":[
+      "condition": "(!skipRestore)",
+      "description": "Restore NuGet packages required by this project.",
+      "manualInstructions": [
         {
-          "text":"Run 'dotnet restore'"
+          "text": "Run 'dotnet restore'"
         }
       ],
-      "actionId":"210D431B-A78B-4D2F-B762-4ED3E3EA9025",
-      "continueOnError":true
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
     },
     {
       "condition":"(HostIdentifier != \"dotnetcli\")",
@@ -191,65 +238,65 @@
       "continueOnError":true
     }
   ],
-  "SpecialCustomOperations":{
-    "**/*.xml":{
-      "operations":[
+  "SpecialCustomOperations": {
+    "**/*.xml": {
+      "operations": [
         {
-          "type":"conditional",
-          "configuration":{
-            "if":[
+          "type": "conditional",
+          "configuration": {
+            "if": [
               "---#if"
             ],
-            "else":[
+            "else": [
               "---#else"
             ],
-            "elseif":[
+            "elseif": [
               "---#elseif",
               "---#elif"
             ],
-            "endif":[
+            "endif": [
               "---#endif"
             ],
-            "trim":"true",
-            "wholeLine":"true"
+            "trim": "true",
+            "wholeLine": "true"
           }
         }
       ]
     },
-    "**/*.json":{
-      "flagPrefix":"//",
-      "operations":[
+    "**/*.json": {
+      "flagPrefix": "//",
+      "operations": [
         {
-          "type":"conditional",
-          "configuration":{
-            "if":[
+          "type": "conditional",
+          "configuration": {
+            "if": [
               "//#if"
             ],
-            "else":[
+            "else": [
               "//#else"
             ],
-            "elseif":[
+            "elseif": [
               "//#elseif"
             ],
-            "endif":[
+            "endif": [
               "//#endif"
             ],
-            "actionableIf":[
+            "actionableIf": [
               "////#if"
             ],
-            "actionableElse":[
+            "actionableElse": [
               "////#else"
             ],
-            "actionableElseif":[
+            "actionableElseif": [
               "////#elseif"
             ],
-            "actions":[
+            "actions": [
               "cStyleUncomment",
               "cStyleReduceComment"
             ],
-            "trim":true,
-            "wholeLine":false,
-            "evaluator":"C++"
+            "trim": true,
+            "wholeLine": false,
+            "evaluator": "C++"
           }
         }
       ]

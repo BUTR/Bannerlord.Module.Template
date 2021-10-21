@@ -24,31 +24,121 @@
       "isVisible": true
     },
     {
-      "id": "Install-Harmony",
-      //"name": {
-      //  "text": "Install Harmony"
-      //},
+      "id": "InstallHarmony",
+      "name": {
+        "text": "Install Harmony"
+      },
+      "choices": [
+        {
+          "id": "do-not-install",
+          "name": {
+            "text": "Do not install"
+          }
+        },
+        {
+          "id": "hard-dependency",
+          "name": {
+            "text": "Install and add reference in SubModules.xml"
+          }
+        }
+      ],
       "isVisible": true
     },
     {
-      "id": "Install-ButterLib",
-      //"name": {
-      //  "text": "Install ButterLib"
-      //},
+      "id": "InstallButterLib",
+      "name": {
+        "text": "Install ButterLib"
+      },
+      "choices": [
+        {
+          "id": "do-not-install",
+          "name": {
+            "text": "Do not install"
+          }
+        },
+        {
+          "id": "hard-dependency",
+          "name": {
+            "text": "Install and add reference in SubModules.xml"
+          }
+        }
+      ],
       "isVisible": true
     },
     {
-      "id": "Install-UIExtenderEx",
-      //"name": {
-      //  "text": "Install UIExtenderEx"
-      //},
+      "id": "InstallUIExtenderEx",
+      "name": {
+        "text": "Install UIExtenderEx"
+      },
+      "choices": [
+        {
+          "id": "do-not-install",
+          "name": {
+            "text": "Do not install"
+          }
+        },
+        {
+          "id": "hard-dependency",
+          "name": {
+            "text": "Install and add reference in SubModules.xml"
+          }
+        }
+      ],
       "isVisible": true
     },
     {
-      "id": "Install-MCM",
-      //"name": {
-      //  "text": "Install Mod Configuration Menu (MCM)"
-      //},
+      "id": "InstallMCM",
+      "name": {
+        "text": "Install Mod Configuration Menu (MCM)"
+      },
+      "choices": [
+        {
+          "id": "do-not-install",
+          "name": {
+            "text": "Do not install"
+          }
+        },
+        {
+          "id": "hard-dependency",
+          "name": {
+            "text": "Install and add reference in SubModules.xml"
+          }
+        },
+        {
+          "id": "soft-dependency",
+          "name": {
+            "text": "Install and add reference only to ButterLib in SubModules.xml"
+          }
+        }
+      ],
+      "isVisible": true
+    },
+    {
+      "id": "InstallReferenceAssemblies",
+      "name": {
+        "text": "Install Reference Assemblies"
+      },
+      "choices": [
+        {
+          "id": "do-not-install",
+          "name": {
+            "text": "Do not install"
+          }
+        },
+        {
+          "id": "install",
+          "name": {
+            "text": "Install"
+          }
+        }
+      ],
+      "isVisible": true
+    },
+    {
+      "id": "gameVersion",
+      "name": {
+        "text": "Bannerlord Game Version for Reference Assemblies"
+      },
       "isVisible": true
     },
     {
