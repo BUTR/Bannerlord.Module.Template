@@ -53,7 +53,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Condition="'$(ReferenceButterLib)' == 'true'" Include="Bannerlord.ButterLib" Version="1.0.30" IncludeAssets="compile" />
-    <PackageReference Condition="'$(ReferenceUIExtenderEx)' == 'true'" Include="Bannerlord.UIExtenderEx" Version="2.1.8" IncludeAssets="compile" />
+    <PackageReference Condition="'$(ReferenceUIExtenderEx)' == 'true'" Include="Bannerlord.UIExtenderEx" Version="2.1.11" IncludeAssets="compile" />
     <PackageReference Condition="'$(ReferenceMCM)' == 'true'" Include="Bannerlord.MCM" Version="4.3.10" IncludeAssets="compile" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.Core.EarlyAccess" Version="$(GameVersion).*" PrivateAssets="All" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.Native.EarlyAccess" Version="$(GameVersion).*" PrivateAssets="All" />
