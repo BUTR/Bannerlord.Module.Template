@@ -8,7 +8,6 @@
       "longName": "game-folder",
       "shortName": ""
     },
-
     "moduleId": {
       "longName": "module-id",
       "shortName": ""
@@ -31,14 +30,6 @@
     },
     "InstallMCM": {
       "longName": "install-mcm",
-      "shortName": ""
-    },
-    "InstallReferenceAssemblies": {
-      "longName": "install-reference-assemblies",
-      "shortName": ""
-    },
-    "gameVersion": {
-      "longName": "gameVersion",
       "shortName": ""
     },
     "langVersion": {

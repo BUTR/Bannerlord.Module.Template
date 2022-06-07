@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <Name value="$modulename$" />
+  <Id value="$moduleid$" />
+  <Version value="v$version$" />
+  <Official value="false" />
+  <DefaultModule value="false" />
+  <SingleplayerModule value="true" />
+  <MultiplayerModule value="false" />
+  <DependedModules>
+---#if (ReferenceHarmony)
+    <DependedModule Id="Bannerlord.Harmony" />
+---#endif
+---#if (ReferenceButterLib)
+    <DependedModule Id="Bannerlord.ButterLib" />
+---#endif
+---#if (ReferenceUIExtenderEx)
+    <DependedModule Id="Bannerlord.UIExtenderEx" />
+---#endif
+---#if (ReferenceMCM)
+    <DependedModule Id="Bannerlord.MBOptionScreen" />
+---#endif
+    <DependedModule Id="Native" />
+    <DependedModule Id="SandBoxCore" />
+    <DependedModule Id="Sandbox" />
+    <DependedModule Id="StoryMode" />
+    <DependedModule Id="CustomBattle" />
+  </DependedModules>
+  <!-- Community Dependency Metadata -->
+  <!-- https://github.com/BUTR/Bannerlord.BUTRLoader#for-modders -->
+  <DependedModuleMetadatas>
+    ---#if (ReferenceHarmony)
+    <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadAfterThis" version="v$harmonyversion$" />
+    ---#endif
+    ---#if (ReferenceButterLib)
+    <DependedModuleMetadata id="Bannerlord.ButterLib" order="LoadAfterThis" version="v$butterlibversion$" />
+    ---#endif
+    ---#if (ReferenceUIExtenderEx)
+    <DependedModuleMetadata id="Bannerlord.UIExtenderEx" order="LoadAfterThis" version="v$uiextenderexversion$" />
+    ---#endif
+    ---#if (ReferenceMCM)
+    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadAfterThis" version="v$mcmversion$" />
+    ---#endif
+    <DependedModuleMetadata id="Native" order="LoadBeforeThis" version="e$gameversion$.*" />
+    <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" version="e$gameversion$.*" />
+    <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" version="e$gameversion$.*" />
+    <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" version="e$gameversion$.*" />
+    <DependedModuleMetadata id="CustomBattle" order="LoadBeforeThis" version="e$gameversion$.*" />
+  </DependedModuleMetadatas>
+  <SubModules>
+---#if (ReferenceModuleLoader)
+    <!-- Bannerlord Module Loader. Do not change the name! -->
+    <SubModule>
+      <Name value="Bannerlord Module Loader" />
+      <DLLName value="Bannerlord.ModuleLoader.dll" />
+      <SubModuleClassType value="Bannerlord.ModuleLoader.SubModule" />
+      <Tags>
+        <Tag key="LoaderFilter" value ="$moduleid$.*.dll" />
+      </Tags>
+    </SubModule>
+---#else
+    <SubModule>
+      <Name value="$modulename$" />
+      <DLLName value="$moduleid$.dll" />
+      <SubModuleClassType value="$moduleid$.SubModule" />
+      <Tags />
+    </SubModule>
+---#endif
+  </SubModules>
+</Module>

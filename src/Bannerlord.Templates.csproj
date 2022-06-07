@@ -29,7 +29,7 @@
   </PropertyGroup>
 
   <ItemGroup Label="Files">
-    <Content Include="**\*" Exclude="**\bin\**\*;**\obj\**\*;**\.vs\**\*" />
+    <Content Include="**\*" Exclude="**\bin\**\*;**\obj\**\*;**\.vs\**\*;**\.idea\**\*" />
     <Compile Remove="**\*" />
     <None Include="..\resources\icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>

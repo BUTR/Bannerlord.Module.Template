@@ -5,13 +5,13 @@
     "Bannerlord",
     "Games"
   ],
-  "name": "Mount & Blade 2: Bannerlord Module",
+  "name": "Mount & Blade 2: Bannerlord Module with Sdk",
   "generatorVersions": "[1.0.0.0-*)",
-  "description": "Project template for Mount & Blade 2: Bannerlord.",
-  "groupIdentity": "Bannerlord.Module",
+  "description": "Project template for Mount & Blade 2: Bannerlord with BUTR's Sdk.",
+  "groupIdentity": "Bannerlord.Module.Sdk",
   "precedence": "5000",
-  "identity": "Bannerlord.Module.CSharp",
-  "shortName": "blmodfx",
+  "identity": "Bannerlord.Module.Sdk.CSharp",
+  "shortName": "blmodsdk",
   "tags": {
     "language": "C#",
     "type": "project"
@@ -19,7 +19,7 @@
   "sourceName": "BLNamespace",
   "preferNameDirectory": true,
   "guids": [
-    "84889846-e8dd-4c24-a8ee-0099a0573895"
+    "84889846-e8dd-4c24-a8ee-0099a0573896"
   ],
   "symbols": {
     "Framework": {
@@ -133,33 +133,21 @@
       ],
       "defaultValue": "do-not-install"
     },
-    "InstallReferenceAssemblies": {
+    "InstallModuleLoader": {
       "type": "parameter",
       "datatype": "choice",
-      "description": "Specifies if the reference assemblies should be used instead of referencing the game assemblies from the game folder to compile against",
+      "description": "Specifies if the community Module Loader should be used.",
       "choices": [
         {
           "choice": "do-not-install",
-          "description": "Do not install Reference Assemblies. Assemblies from the game's folder will be used instead"
+          "description": "Do not install the community Module Loader"
         },
         {
           "choice": "install",
-          "description": "Install Reference Assemblies"
+          "description": "Install the community Module Loader"
         }
       ],
       "defaultValue": "do-not-install"
-    },
-    "gameVersion": {
-      "type": "parameter",
-      "dataType": "string",
-      "description": "Version of Bannerlord that Reference Assemblies will use",
-      "defaultValue": "1.6.4",
-      "replaces": "$(ProjectGameVersion)",
-      "forms": {
-        "global": [
-          "encode"
-        ]
-      }
     },
     "langVersion": {
       "type": "parameter",
@@ -180,6 +168,7 @@
       "description": "If specified, skips the automatic restore of the project on create.",
       "defaultValue": "false"
     },
+    
     "ReferenceHarmony": {
       "type": "computed",
       "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\")"
@@ -196,13 +185,9 @@
       "type": "computed",
       "value": "(InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\")"
     },
-    "ReferenceReferenceAssemblies": {
+    "ReferenceModuleLoader": {
       "type": "computed",
-      "value": "(InstallReferenceAssemblies == \"install\")"
-    },
-    "ReferenceGameAssemblies": {
-      "type": "computed",
-      "value": "(InstallReferenceAssemblies == \"do-not-install\")"
+      "value": "(InstallModuleLoader == \"install\")"
     }
   },
   "forms": {

@@ -121,34 +121,6 @@
       "isVisible": true
     },
     {
-      "id": "InstallReferenceAssemblies",
-      "name": {
-        "text": "Install Reference Assemblies"
-      },
-      "choices": [
-        {
-          "id": "do-not-install",
-          "name": {
-            "text": "Do not install"
-          }
-        },
-        {
-          "id": "install",
-          "name": {
-            "text": "Install"
-          }
-        }
-      ],
-      "isVisible": true
-    },
-    {
-      "id": "gameVersion",
-      "name": {
-        "text": "Bannerlord Game Version for Reference Assemblies"
-      },
-      "isVisible": true
-    },
-    {
       "id": "langVersion",
       "name": {
         "text": "Language Version"
