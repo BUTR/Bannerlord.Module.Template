@@ -61,7 +61,7 @@
 ---#else
     <SubModule>
       <Name value="$modulename$" />
-      <DLLName value="$moduleid$.dll" />
+      <DLLName value="$moduleid$.$gameversion$.dll" />
       <SubModuleClassType value="$moduleid$.SubModule" />
       <Tags />
     </SubModule>
