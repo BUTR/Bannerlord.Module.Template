@@ -11,15 +11,15 @@
     <ModuleName>$(ProjectModuleName)</ModuleName>
     <GameFolder>$(ProjectGameFolder)</GameFolder>
     <!-- Module manually override GameVersion -->
-    <!-- <OverrideGameVersion>e1.7.1</OverrideGameVersion> -->
+    <!-- <OverrideGameVersion>e1.8.0</OverrideGameVersion> -->
   </PropertyGroup>
 
   <!-- Development Variables -->
   <PropertyGroup>
     <HarmonyVersion Condition="'$(ReferenceHarmony)' == 'true'">2.2.1</HarmonyVersion>
-    <UIExtenderExVersion Condition="'$(ReferenceUIExtenderEx)' == 'true'">2.1.14</UIExtenderExVersion>
-    <ButterLibVersion Condition="'$(ReferenceButterLib)' == 'true'">1.0.38</ButterLibVersion>
-    <MCMVersion Condition="'$(ReferenceMCM)' == 'true'">4.3.23</MCMVersion>
+    <UIExtenderExVersion Condition="'$(ReferenceUIExtenderEx)' == 'true'">2.2.1</UIExtenderExVersion>
+    <ButterLibVersion Condition="'$(ReferenceButterLib)' == 'true'">2.1.5</ButterLibVersion>
+    <MCMVersion Condition="'$(ReferenceMCM)' == 'true'">4.7.3</MCMVersion>
     <BUTRModuleManagerVersion Condition="'$(ReferenceModuleLoader)' == 'true'">3.0.94</BUTRModuleManagerVersion>
     <BUTRModuleLoaderVersion Condition="'$(ReferenceModuleLoader)' == 'true'">1.0.1.24</BUTRModuleLoaderVersion>
   </PropertyGroup>
@@ -28,7 +28,8 @@
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" PrivateAssets="all" IncludeAssets="compile" />
     <PackageReference Include="Nullable" Version="1.3.0" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
     <PackageReference Include="IsExternalInit" Version="1.0.2" PrivateAssets="all" IncludeAssets ="runtime; build; native; contentfiles; analyzers; buildtransitive" />
-    <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="Harmony.Extensions" Version="2.0.0.57" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
+    <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="Harmony.Extensions" Version="3.1.0.61" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
+    <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="BUTR.Harmony.Analyzer" Version="1.0.1.42" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
     <PackageReference Condition="'$(ReferenceModuleLoader)' == 'true'" Include="Bannerlord.ModuleLoader" Version="1.0.1.24" IncludeAssets="compile" />
   </ItemGroup>
   
