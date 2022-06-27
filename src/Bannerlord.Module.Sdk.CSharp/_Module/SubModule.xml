@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Module>
-  <Name value="$modulename$" />
+<Module xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/BUTR/Bannerlord.XmlSchemas/master/SubModule.xsd" >
   <Id value="$moduleid$" />
+  <Name value="$modulename$" />
   <Version value="v$version$" />
   <Official value="false" />
   <DefaultModule value="false" />
@@ -12,22 +13,22 @@
   <ModuleCategory value="Singleplayer"/>
   <DependedModules>
 ---#if (ReferenceHarmony)
-    <DependedModule Id="Bannerlord.Harmony" />
+    <DependedModule Id="Bannerlord.Harmony" DependentVersion="v$harmonyversion$" />
 ---#endif
 ---#if (ReferenceButterLib)
-    <DependedModule Id="Bannerlord.ButterLib" />
+    <DependedModule Id="Bannerlord.ButterLib" DependentVersion="v$butterlibversion$" />
 ---#endif
 ---#if (ReferenceUIExtenderEx)
-    <DependedModule Id="Bannerlord.UIExtenderEx" />
+    <DependedModule Id="Bannerlord.UIExtenderEx" DependentVersion="v$uiextenderexversion$" />
 ---#endif
 ---#if (ReferenceMCM)
-    <DependedModule Id="Bannerlord.MBOptionScreen" />
+    <DependedModule Id="Bannerlord.MBOptionScreen" DependentVersion="v$mcmversion$" />
 ---#endif
-    <DependedModule Id="Native" />
-    <DependedModule Id="SandBoxCore" />
-    <DependedModule Id="Sandbox" />
-    <DependedModule Id="StoryMode" />
-    <DependedModule Id="CustomBattle" />
+    <DependedModule Id="Native" DependentVersion="e$gameversion$" />
+    <DependedModule Id="SandBoxCore" DependentVersion="e$gameversion$" />
+    <DependedModule Id="Sandbox" DependentVersion="e$gameversion$" />
+    <DependedModule Id="StoryMode" DependentVersion="e$gameversion$" />
+    <DependedModule Id="CustomBattle" DependentVersion="e$gameversion$" />
   </DependedModules>
   <!-- Community Dependency Metadata -->
   <!-- https://github.com/BUTR/Bannerlord.BUTRLoader#for-modders -->

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+              xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/BUTR/Bannerlord.XmlSchemas/master/ModuleLanguageData.xsd"
+              
+              id="English"
+              name="English"
+              subtitle_extension="en-GB"
+              supported_iso="en-GB,en-US,en,eng,en-us,en-gb,en-au,en-bz,en-ca,en-ie,en-jm,en-nz,en-za,en-tt"
+              under_development="false">
+  
+  <LanguageFile xml_path="sta_strings.xml" />
+</LanguageData>

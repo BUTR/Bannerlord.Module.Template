@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Module>
-  <Name value="$modulename$" />
+<Module xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/BUTR/Bannerlord.XmlSchemas/master/SubModule.xsd" >
   <Id value="$modulename$" />
+  <Name value="$modulename$" />
   <Version value="v$version$" />
   <Official value="false" />
   <DefaultModule value="false" />
@@ -46,10 +47,11 @@
 ---#endif
     <DependedModuleMetadata id="Native" order="LoadAfterThis" />
     <DependedModuleMetadata id="SandBoxCore" order="LoadAfterThis" />
-    <DependedModuleMetadata id="Sandbox" />
+    <DependedModuleMetadata id="Sandbox" order="LoadAfterThis" />
     <DependedModuleMetadata id="StoryMode" order="LoadAfterThis" />
     <DependedModuleMetadata id="CustomBattle" order="LoadAfterThis" />
   </DependedModuleMetadatas>
+  <!-- Community Dependency Metadata -->
   <SubModules>
     <SubModule>
       <Name value="$modulename$" />
