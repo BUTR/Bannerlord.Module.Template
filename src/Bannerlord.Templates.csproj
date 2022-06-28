@@ -35,7 +35,7 @@
   </ItemGroup>
 
   <ItemGroup Label="Package References">
-    <PackageReference Include="MinVer" PrivateAssets="all" Version="4.0.0" />
+    <PackageReference Include="MinVer" PrivateAssets="all" Version="4.1.0" />
   </ItemGroup>
 
   <Target Name="Versioning" AfterTargets="MinVer">
