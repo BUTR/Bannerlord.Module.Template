@@ -17,9 +17,9 @@
   <!-- Development Variables -->
   <PropertyGroup>
     <HarmonyVersion Condition="'$(ReferenceHarmony)' == 'true'">2.2.1</HarmonyVersion>
-    <UIExtenderExVersion Condition="'$(ReferenceUIExtenderEx)' == 'true'">2.2.1</UIExtenderExVersion>
-    <ButterLibVersion Condition="'$(ReferenceButterLib)' == 'true'">2.1.5</ButterLibVersion>
-    <MCMVersion Condition="'$(ReferenceMCM)' == 'true'">4.7.3</MCMVersion>
+    <UIExtenderExVersion Condition="'$(ReferenceUIExtenderEx)' == 'true'">2.2.5</UIExtenderExVersion>
+    <ButterLibVersion Condition="'$(ReferenceButterLib)' == 'true'">2.1.9</ButterLibVersion>
+    <MCMVersion Condition="'$(ReferenceMCM)' == 'true'">4.7.7</MCMVersion>
     <BUTRModuleManagerVersion Condition="'$(ReferenceModuleLoader)' == 'true'">3.0.94</BUTRModuleManagerVersion>
     <BUTRModuleLoaderVersion Condition="'$(ReferenceModuleLoader)' == 'true'">1.0.1.24</BUTRModuleLoaderVersion>
   </PropertyGroup>
