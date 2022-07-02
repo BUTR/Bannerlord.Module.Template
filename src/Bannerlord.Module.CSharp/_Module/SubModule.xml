@@ -34,22 +34,22 @@
   <!-- https://github.com/BUTR/Bannerlord.BUTRLoader#for-modders -->
   <DependedModuleMetadatas>
 ---#if (ReferenceHarmony)
-    <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadAfterThis" />
+    <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" />
 ---#endif
 ---#if (ReferenceButterLib)
-    <DependedModuleMetadata id="Bannerlord.ButterLib" order="LoadAfterThis" />
+    <DependedModuleMetadata id="Bannerlord.ButterLib" order="LoadBeforeThis" />
 ---#endif
 ---#if (ReferenceUIExtenderEx)
-    <DependedModuleMetadata id="Bannerlord.UIExtenderEx" order="LoadAfterThis" />
+    <DependedModuleMetadata id="Bannerlord.UIExtenderEx" order="LoadBeforeThis" />
 ---#endif
 ---#if (ReferenceMCM)
-    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadAfterThis" />
+    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" />
 ---#endif
-    <DependedModuleMetadata id="Native" order="LoadAfterThis" />
-    <DependedModuleMetadata id="SandBoxCore" order="LoadAfterThis" />
-    <DependedModuleMetadata id="Sandbox" order="LoadAfterThis" />
-    <DependedModuleMetadata id="StoryMode" order="LoadAfterThis" />
-    <DependedModuleMetadata id="CustomBattle" order="LoadAfterThis" />
+    <DependedModuleMetadata id="Native" order="LoadBeforeThis" />
+    <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" />
+    <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" />
+    <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" />
+    <DependedModuleMetadata id="CustomBattle" order="LoadBeforeThis" />
   </DependedModuleMetadatas>
   <!-- Community Dependency Metadata -->
   <SubModules>

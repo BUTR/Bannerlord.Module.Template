@@ -34,16 +34,16 @@
   <!-- https://github.com/BUTR/Bannerlord.BUTRLoader#for-modders -->
   <DependedModuleMetadatas>
     ---#if (ReferenceHarmony)
-    <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadAfterThis" version="v$harmonyversion$" />
+    <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="v$harmonyversion$" />
     ---#endif
     ---#if (ReferenceButterLib)
-    <DependedModuleMetadata id="Bannerlord.ButterLib" order="LoadAfterThis" version="v$butterlibversion$" />
+    <DependedModuleMetadata id="Bannerlord.ButterLib" order="LoadBeforeThis" version="v$butterlibversion$" />
     ---#endif
     ---#if (ReferenceUIExtenderEx)
-    <DependedModuleMetadata id="Bannerlord.UIExtenderEx" order="LoadAfterThis" version="v$uiextenderexversion$" />
+    <DependedModuleMetadata id="Bannerlord.UIExtenderEx" order="LoadBeforeThis" version="v$uiextenderexversion$" />
     ---#endif
     ---#if (ReferenceMCM)
-    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadAfterThis" version="v$mcmversion$" />
+    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" version="v$mcmversion$" />
     ---#endif
     <DependedModuleMetadata id="Native" order="LoadBeforeThis" version="e$gameversion$.*" />
     <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" version="e$gameversion$.*" />
