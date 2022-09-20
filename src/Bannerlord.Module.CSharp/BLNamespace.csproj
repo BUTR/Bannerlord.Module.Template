@@ -42,7 +42,7 @@
     <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="Lib.Harmony" Version="2.2.1" IncludeAssets="compile" />
     <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="Harmony.Extensions" Version="3.1.0.61" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
     <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="BUTR.Harmony.Analyzer" Version="1.0.1.44" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
-    <PackageReference Condition="'$(ReferenceButterLib)' == 'true'" Include="Bannerlord.ButterLib" Version="2.1.9" IncludeAssets="compile" />
+    <PackageReference Condition="'$(ReferenceButterLib)' == 'true'" Include="Bannerlord.ButterLib" Version="2.2.3" IncludeAssets="compile" />
     <PackageReference Condition="'$(ReferenceUIExtenderEx)' == 'true'" Include="Bannerlord.UIExtenderEx" Version="2.2.5" IncludeAssets="compile" />
     <PackageReference Condition="'$(ReferenceMCM)' == 'true'" Include="Bannerlord.MCM" Version="4.7.7" IncludeAssets="compile" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.Core.EarlyAccess" Version="$(GameVersion).*" PrivateAssets="All" />
