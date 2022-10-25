@@ -153,7 +153,7 @@
       "type": "parameter",
       "dataType": "string",
       "description": "Version of Bannerlord that Reference Assemblies will use",
-      "defaultValue": "1.6.4",
+      "defaultValue": "1.0.0",
       "replaces": "$(ProjectGameVersion)",
       "forms": {
         "global": [
