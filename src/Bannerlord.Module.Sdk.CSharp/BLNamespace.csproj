@@ -11,16 +11,16 @@
     <ModuleName>$(ProjectModuleName)</ModuleName>
     <GameFolder>$(ProjectGameFolder)</GameFolder>
     <!-- Module manually override GameVersion -->
-    <!-- <OverrideGameVersion>e1.8.0</OverrideGameVersion> -->
+    <!-- <OverrideGameVersion>v1.0.0</OverrideGameVersion> -->
   </PropertyGroup>
 
   <!-- Development Variables -->
   <PropertyGroup>
     <HarmonyVersion Condition="'$(ReferenceHarmony)' == 'true'">2.2.2</HarmonyVersion>
-    <UIExtenderExVersion Condition="'$(ReferenceUIExtenderEx)' == 'true'">2.2.12</UIExtenderExVersion>
-    <ButterLibVersion Condition="'$(ReferenceButterLib)' == 'true'">2.2.8</ButterLibVersion>
-    <MCMVersion Condition="'$(ReferenceMCM)' == 'true'">4.7.10</MCMVersion>
-    <BUTRModuleManagerVersion Condition="'$(ReferenceModuleLoader)' == 'true'">4.0.147</BUTRModuleManagerVersion>
+    <UIExtenderExVersion Condition="'$(ReferenceUIExtenderEx)' == 'true'">2.3.0</UIExtenderExVersion>
+    <ButterLibVersion Condition="'$(ReferenceButterLib)' == 'true'">2.3.1</ButterLibVersion>
+    <MCMVersion Condition="'$(ReferenceMCM)' == 'true'">5.0.0</MCMVersion>
+    <BUTRModuleManagerVersion Condition="'$(ReferenceModuleLoader)' == 'true'">4.0.149</BUTRModuleManagerVersion>
     <BUTRModuleLoaderVersion Condition="'$(ReferenceModuleLoader)' == 'true'">1.0.1.36</BUTRModuleLoaderVersion>
   </PropertyGroup>
 
