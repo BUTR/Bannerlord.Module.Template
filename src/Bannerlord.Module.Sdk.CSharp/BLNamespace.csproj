@@ -17,11 +17,11 @@
   <!-- Development Variables -->
   <PropertyGroup>
     <HarmonyVersion Condition="'$(ReferenceHarmony)' == 'true'">2.2.2</HarmonyVersion>
-    <UIExtenderExVersion Condition="'$(ReferenceUIExtenderEx)' == 'true'">2.3.0</UIExtenderExVersion>
-    <ButterLibVersion Condition="'$(ReferenceButterLib)' == 'true'">2.3.1</ButterLibVersion>
-    <MCMVersion Condition="'$(ReferenceMCM)' == 'true'">5.0.0</MCMVersion>
+    <UIExtenderExVersion Condition="'$(ReferenceUIExtenderEx)' == 'true'">2.3.5</UIExtenderExVersion>
+    <ButterLibVersion Condition="'$(ReferenceButterLib)' == 'true'">2.4.1</ButterLibVersion>
+    <MCMVersion Condition="'$(ReferenceMCM)' == 'true'">5.0.4</MCMVersion>
     <BUTRModuleManagerVersion Condition="'$(ReferenceModuleLoader)' == 'true'">4.0.149</BUTRModuleManagerVersion>
-    <BUTRModuleLoaderVersion Condition="'$(ReferenceModuleLoader)' == 'true'">1.0.1.36</BUTRModuleLoaderVersion>
+    <BUTRModuleLoaderVersion Condition="'$(ReferenceModuleLoader)' == 'true'">1.0.1.43</BUTRModuleLoaderVersion>
   </PropertyGroup>
 
   <ItemGroup>
