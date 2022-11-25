@@ -18,8 +18,8 @@
   <PropertyGroup>
     <HarmonyVersion Condition="'$(ReferenceHarmony)' == 'true'">2.2.2</HarmonyVersion>
     <UIExtenderExVersion Condition="'$(ReferenceUIExtenderEx)' == 'true'">2.3.5</UIExtenderExVersion>
-    <ButterLibVersion Condition="'$(ReferenceButterLib)' == 'true'">2.4.1</ButterLibVersion>
-    <MCMVersion Condition="'$(ReferenceMCM)' == 'true'">5.0.4</MCMVersion>
+    <ButterLibVersion Condition="'$(ReferenceButterLib)' == 'true'">2.5.1</ButterLibVersion>
+    <MCMVersion Condition="'$(ReferenceMCM)' == 'true'">5.3.2</MCMVersion>
     <BUTRModuleManagerVersion Condition="'$(ReferenceModuleLoader)' == 'true'">4.0.149</BUTRModuleManagerVersion>
     <BUTRModuleLoaderVersion Condition="'$(ReferenceModuleLoader)' == 'true'">1.0.1.43</BUTRModuleLoaderVersion>
   </PropertyGroup>
@@ -28,7 +28,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" PrivateAssets="all" IncludeAssets="compile" />
     <PackageReference Include="Nullable" Version="1.3.1" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
     <PackageReference Include="IsExternalInit" Version="1.0.3" PrivateAssets="all" IncludeAssets ="runtime; build; native; contentfiles; analyzers; buildtransitive" />
-    <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="Harmony.Extensions" Version="3.1.0.67" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
+    <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="Harmony.Extensions" Version="3.1.0.68" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
     <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="BUTR.Harmony.Analyzer" Version="1.0.1.42" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
     <PackageReference Condition="'$(ReferenceModuleLoader)' == 'true'" Include="Bannerlord.ModuleLoader" Version="1.0.1.24" IncludeAssets="compile" />
   </ItemGroup>
