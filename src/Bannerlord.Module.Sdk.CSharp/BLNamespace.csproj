@@ -1,4 +1,4 @@
-<Project Sdk="Bannerlord.BUTRModule.Sdk/1.0.1.80">
+<Project Sdk="Bannerlord.BUTRModule.Sdk/1.0.1.85">
 
   <PropertyGroup>
     <Version>0.0.1</Version>
@@ -20,18 +20,18 @@
     <UIExtenderExVersion Condition="'$(ReferenceUIExtenderEx)' == 'true'">2.3.5</UIExtenderExVersion>
     <ButterLibVersion Condition="'$(ReferenceButterLib)' == 'true'">2.5.1</ButterLibVersion>
     <MCMVersion Condition="'$(ReferenceMCM)' == 'true'">5.3.2</MCMVersion>
-    <BUTRModuleManagerVersion Condition="'$(ReferenceModuleLoader)' == 'true'">4.0.149</BUTRModuleManagerVersion>
     <BUTRModuleLoaderVersion Condition="'$(ReferenceModuleLoader)' == 'true'">1.0.1.43</BUTRModuleLoaderVersion>
+    <HarmonyExtensionsVersion>3.1.0.68</HarmonyExtensionsVersion>
+    <!--
+    <BUTRSharedVersion>3.0.0.122</BUTRSharedVersion>
+    <BUTRModuleManagerVersion>4.0.150</BUTRModuleManagerVersion>
+    -->
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" PrivateAssets="all" IncludeAssets="compile" />
-    <PackageReference Include="Nullable" Version="1.3.1" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
-    <PackageReference Include="IsExternalInit" Version="1.0.3" PrivateAssets="all" IncludeAssets ="runtime; build; native; contentfiles; analyzers; buildtransitive" />
-    <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="Harmony.Extensions" Version="3.1.0.68" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
     <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="BUTR.Harmony.Analyzer" Version="1.0.1.42" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
-    <PackageReference Condition="'$(ReferenceMCM)' == 'true' AND '$(ReferenceMCMAsSoftDependency)' == 'true'" Update="Bannerlord.MCM" IncludeAssets="all" />
-    <PackageReference Condition="'$(ReferenceModuleLoader)' == 'true'" Include="Bannerlord.ModuleLoader" Version="1.0.1.24" IncludeAssets="compile" />
+    <PackageReference Condition="'$(ReferenceMCM)' == 'true' AND '$(ReferenceMCMAsSoftDependency)' == 'true'" Include="Bannerlord.MCM" Version="$(MCMVersion)" />
   </ItemGroup>
   
 </Project>
