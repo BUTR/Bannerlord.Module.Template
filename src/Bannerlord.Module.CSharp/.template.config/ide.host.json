@@ -114,7 +114,7 @@
         {
           "id": "soft-dependency",
           "name": {
-            "text": "Install and add reference only to ButterLib in SubModule.xml"
+            "text": "Install as a soft dependency"
           }
         }
       ],

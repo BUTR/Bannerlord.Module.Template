@@ -175,7 +175,7 @@
     },
     "ReferenceButterLib": {
       "type": "computed",
-      "value": "(InstallButterLib == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\")"
+      "value": "(InstallButterLib == \"hard-dependency\" || InstallMCM == \"hard-dependency\")"
     },
     "ReferenceUIExtenderEx": {
       "type": "computed",
@@ -185,9 +185,29 @@
       "type": "computed",
       "value": "(InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\")"
     },
+    "ReferenceMCMAsSoftDependency": {
+      "type": "computed",
+      "value": "(InstallMCM == \"soft-dependency\")"
+    },
     "ReferenceModuleLoader": {
       "type": "computed",
       "value": "(InstallModuleLoader == \"install\")"
+    },
+    "RunHarmony": {
+      "type": "computed",
+      "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\")"
+    },
+    "RunButterLib": {
+      "type": "computed",
+      "value": "(InstallButterLib == \"hard-dependency\" || InstallMCM == \"hard-dependency\")"
+    },
+    "RunUIExtenderEx": {
+      "type": "computed",
+      "value": "(InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\")"
+    },
+    "RunMCM": {
+      "type": "computed",
+      "value": "(InstallMCM == \"hard-dependency\")"
     }
   },
   "forms": {
