@@ -7,14 +7,14 @@
     {
       "id": "gameWindows",
       "name": {
-        "text": "Target the Steam/GOG/Epic version of the game"
+        "text": "For Steam/GOG/Epic"
       },
       "isVisible": true
     },
     {
       "id": "gameWindowsStore",
       "name": {
-        "text": "Target the Windows Game Pass PC version of the game"
+        "text": "For Xbox Game Pass PC"
       },
       "isVisible": true
     },
