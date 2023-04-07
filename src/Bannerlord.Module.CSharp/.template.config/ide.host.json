@@ -5,11 +5,6 @@
   "icon": "icon.png",
   "symbolInfo": [
     {
-      "id": "Framework",
-      "isVisible": true,
-      "defaultValue": "net472"
-    },
-    {
       "id": "gameFolder",
       "name": {
         "text": "Bannerlord Game Folder Location"

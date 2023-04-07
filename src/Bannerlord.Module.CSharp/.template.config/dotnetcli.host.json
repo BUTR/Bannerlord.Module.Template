@@ -1,14 +1,10 @@
 {
   "$schema": "https://json.schemastore.org/dotnetcli.host",
   "symbolInfo": {
-    "Framework": {
-      "longName": "framework"
-    },
     "gameFolder": {
       "longName": "game-folder",
       "shortName": ""
     },
-
     "moduleId": {
       "longName": "module-id",
       "shortName": ""

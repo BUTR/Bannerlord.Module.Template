@@ -2,46 +2,48 @@
 
   <PropertyGroup>
     <Version>0.0.1</Version>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Platforms>x64</Platforms>
     <LangVersion Condition="'$(langVersion)' != ''">$(ProjectLanguageVersion)</LangVersion>
     <Nullable Condition="'$(nullable)' != ''">enable</Nullable>
     <ModuleId>$(ProjectModuleId)</ModuleId>
     <ModuleName>$(ProjectModuleName)</ModuleName>
     <GameFolder>$(ProjectGameFolder)</GameFolder>
+    <GameBinariesFolder Condition="Exists('$(GameFolder)\bin\Win64_Shipping_Client')">Win64_Shipping_Client</GameBinariesFolder>
+    <GameBinariesFolder Condition="Exists('$(GameFolder)\bin\Gaming.Desktop.x64_Shipping_Client')">Gaming.Desktop.x64_Shipping_Client</GameBinariesFolder>
     <GameVersion Condition="'$(ReferenceReferenceAssemblies)' == 'true'">$(ProjectGameVersion)</GameVersion>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(ReferenceGameAssemblies)' == 'true'">
-    <Reference Include="$(GameFolder)\bin\Win64_Shipping_Client\Newtonsoft.Json.dll">
+    <Reference Include="$(GameFolder)\bin\$(GameBinariesFolder)\Newtonsoft.Json.dll">
       <HintPath>%(Identity)</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="$(GameFolder)\bin\Win64_Shipping_Client\TaleWorlds.*.dll" Exclude="$(GameFolder)\bin\Win64_Shipping_Client\TaleWorlds.Native.dll">
+    <Reference Include="$(GameFolder)\bin\$(GameBinariesFolder)\TaleWorlds.*.dll" Exclude="$(GameFolder)\bin\$(GameBinariesFolder)\TaleWorlds.Native.dll">
       <HintPath>%(Identity)</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="$(GameFolder)\Modules\Native\bin\Win64_Shipping_Client\*.dll">
+    <Reference Include="$(GameFolder)\Modules\Native\bin\$(GameBinariesFolder)\*.dll">
       <HintPath>%(Identity)</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="$(GameFolder)\Modules\SandBox\bin\Win64_Shipping_Client\*.dll">
+    <Reference Include="$(GameFolder)\Modules\SandBox\bin\$(GameBinariesFolder)\*.dll">
       <HintPath>%(Identity)</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="$(GameFolder)\Modules\SandBoxCore\bin\Win64_Shipping_Client\*.dll">
+    <Reference Include="$(GameFolder)\Modules\SandBoxCore\bin\$(GameBinariesFolder)\*.dll">
       <HintPath>%(Identity)</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="$(GameFolder)\Modules\StoryMode\bin\Win64_Shipping_Client\*.dll">
+    <Reference Include="$(GameFolder)\Modules\StoryMode\bin\$(GameBinariesFolder)\*.dll">
       <HintPath>%(Identity)</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="$(GameFolder)\Modules\CustomBattle\bin\Win64_Shipping_Client\*.dll">
+    <Reference Include="$(GameFolder)\Modules\CustomBattle\bin\$(GameBinariesFolder)\*.dll">
       <HintPath>%(Identity)</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="$(GameFolder)\Modules\BirthAndDeath\bin\Win64_Shipping_Client\*.dll">
+    <Reference Include="$(GameFolder)\Modules\BirthAndDeath\bin\$(GameBinariesFolder)\*.dll">
       <HintPath>%(Identity)</HintPath>
       <Private>False</Private>
     </Reference>
@@ -51,20 +53,20 @@
     <PackageReference Include="Nullable" Version="1.3.1" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
     <PackageReference Include="IsExternalInit" Version="1.0.3" PrivateAssets="all" IncludeAssets ="runtime; build; native; contentfiles; analyzers; buildtransitive" />
     <PackageReference Include="Bannerlord.BuildResources" Version="1.0.1.85" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
-    <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="Lib.Harmony" Version="2.2.2" IncludeAssets="compile" />
-    <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="Harmony.Extensions" Version="3.1.0.67" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
+    <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="BannerlordLib.Harmony" Version="2.2.2" IncludeAssets="compile" />
+    <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="Harmony.Extensions" Version="3.2.0.77" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
     <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="BUTR.Harmony.Analyzer" Version="1.0.1.44" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
-    <PackageReference Condition="'$(ReferenceUIExtenderEx)' == 'true'" Include="Bannerlord.UIExtenderEx" Version="2.3.1" IncludeAssets="compile" />
-    <PackageReference Condition="'$(ReferenceButterLib)' == 'true'" Include="Bannerlord.ButterLib" Version="2.5.1" IncludeAssets="compile" />
-    <PackageReference Condition="'$(ReferenceMCM)' == 'true' AND '$(ReferenceMCMAsSoftDependency)' != 'true'" Include="Bannerlord.MCM" Version="5.3.2" IncludeAssets="compile" />
-    <PackageReference Condition="'$(ReferenceMCM)' == 'true' AND '$(ReferenceMCMAsSoftDependency)' == 'true'" Include="Bannerlord.MCM" Version="5.3.2" />
+    <PackageReference Condition="'$(ReferenceUIExtenderEx)' == 'true'" Include="Bannerlord.UIExtenderEx" Version="2.8.0" IncludeAssets="compile" />
+    <PackageReference Condition="'$(ReferenceButterLib)' == 'true'" Include="Bannerlord.ButterLib" Version="2.8.0" IncludeAssets="compile" />
+    <PackageReference Condition="'$(ReferenceMCM)' == 'true' AND '$(ReferenceMCMAsSoftDependency)' != 'true'" Include="Bannerlord.MCM" Version="5.7.1" IncludeAssets="compile" />
+    <PackageReference Condition="'$(ReferenceMCM)' == 'true' AND '$(ReferenceMCMAsSoftDependency)' == 'true'" Include="Bannerlord.MCM" Version="5.7.1" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.Core" Version="$(GameVersion).*-*" PrivateAssets="All" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.Native" Version="$(GameVersion).*-*" PrivateAssets="All" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.StoryMode" Version="$(GameVersion).*-*" PrivateAssets="All" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.SandBox" Version="$(GameVersion).*-*" PrivateAssets="All" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.CustomBattle" Version="$(GameVersion).*-*" PrivateAssets="All" />
     <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Bannerlord.ReferenceAssemblies.BirthAndDeath" Version="$(GameVersion).*-*" PrivateAssets="All" />
-    <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Newtonsoft.Json" Version="11.0.2" PrivateAssets="all" IncludeAssets="compile" />
+    <PackageReference Condition="'$(ReferenceReferenceAssemblies)' == 'true'" Include="Newtonsoft.Json" Version="13.0.1" PrivateAssets="all" IncludeAssets="compile" />
   </ItemGroup>
 
 </Project>

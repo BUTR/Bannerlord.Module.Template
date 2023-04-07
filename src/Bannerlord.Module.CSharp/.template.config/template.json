@@ -22,23 +22,6 @@
     "84889846-e8dd-4c24-a8ee-0099a0573895"
   ],
   "symbols": {
-    "Framework": {
-      "type": "parameter",
-      "description": "The target framework for the project.",
-      "datatype": "choice",
-      "choices": [
-        {
-          "choice": "net472",
-          "description": "Target .NET Framework 4.7.2"
-        },
-        {
-          "choice": "netstandard2.0",
-          "description": "Target .NET Standard 2.0"
-        }
-      ],
-      "replaces": "net472",
-      "defaultValue": "net472"
-    },
     "gameFolder": {
       "type": "parameter",
       "dataType": "string",
