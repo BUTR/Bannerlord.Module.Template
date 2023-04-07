@@ -29,8 +29,6 @@ You also need to use the new template feature:
 </p>
 
 ## FAQ
-### What 'Target Framework' should I chose?
-If you plan on using Harmony or WinForms, use `.NET Framework 4.7.2`. If not, you can chose `.NET Standard 2.0`.  
 ### What are the differences between 'soft-dependency' and 'hard-dependency?
 **Hard dependency** means that an entry will be added to `SubModules.xml`. Your Module will not include the dependency inside it's `/bin` folder (the .dll). It won't allow the game to run your mod without the dependency installed as a separate Module. This is an important feature to prevent having multiple versions of the same dependency running within the game.  
 **Soft dependency** means that nothing will be added to `SubModules.xml`. Your Module will include the dependency inside it's `/bin` folder (the .dll).
