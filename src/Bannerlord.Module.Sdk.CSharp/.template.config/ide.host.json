@@ -5,6 +5,20 @@
   "icon": "icon.png",
   "symbolInfo": [
     {
+      "id": "gameWindows",
+      "name": {
+        "text": "Target the Steam/GOG/Epic version of the game"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "gameWindowsStore",
+      "name": {
+        "text": "Target the Windows Game Pass PC version of the game"
+      },
+      "isVisible": true
+    },
+    {
       "id": "gameFolder",
       "name": {
         "text": "Bannerlord Game Folder Location"

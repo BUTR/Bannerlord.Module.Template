@@ -6,6 +6,11 @@
     <Platforms>x64</Platforms>
     <LangVersion Condition="'$(langVersion)' != ''">$(ProjectLanguageVersion)</LangVersion>
     <Nullable Condition="'$(nullable)' != ''">enable</Nullable>
+
+    <!-- Steam/GOG/Epic versions of the game -->
+    <BuildForWindows>$(ProjectBuildForWindows)</BuildForWindows>
+    <!-- Xbox Game Pass PC version of the game -->
+    <BuildForWindowsStore>$(ProjectBuildForWindowsStore)</BuildForWindowsStore>
     
     <ModuleId>$(ProjectModuleId)</ModuleId>
     <ModuleName>$(ProjectModuleName)</ModuleName>

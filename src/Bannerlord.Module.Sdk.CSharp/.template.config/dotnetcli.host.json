@@ -1,6 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/dotnetcli.host",
   "symbolInfo": {
+    "gameWindows": {
+      "longName": "game-windows",
+      "shortName": ""
+    },
+    "gameWindowsStore": {
+      "longName": "game-windows-store",
+      "shortName": ""
+    },
     "gameFolder": {
       "longName": "game-folder",
       "shortName": ""

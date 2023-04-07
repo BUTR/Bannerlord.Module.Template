@@ -22,6 +22,20 @@
     "84889846-e8dd-4c24-a8ee-0099a0573896"
   ],
   "symbols": {
+    "gameWindows": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Target the Steam/GOG/Epic version of the game",
+      "defaultValue": "true",
+      "replaces": "$(ProjectBuildForWindows)"
+    },
+    "gameWindowsStore": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Target the Windows Game Pass PC version of the game",
+      "defaultValue": "true",
+      "replaces": "$(ProjectBuildForWindowsStore)"
+    },
     "gameFolder": {
       "type": "parameter",
       "dataType": "string",

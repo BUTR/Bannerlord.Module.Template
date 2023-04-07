@@ -22,9 +22,23 @@
     "84889846-e8dd-4c24-a8ee-0099a0573895"
   ],
   "symbols": {
+    "gameWindows": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Target the Steam/GOG/Epic version of the game",
+      "defaultValue": "true",
+      "replaces": "$(ProjectBuildForWindows)"
+    },
+    "gameWindowsStore": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Target the Windows Game Pass PC version of the game",
+      "defaultValue": "true",
+      "replaces": "$(ProjectBuildForWindowsStore)"
+    },
     "gameFolder": {
       "type": "parameter",
-      "dataType": "string",
+      "datatype": "string",
       "description": "Path to Bannerlord's game folder",
       "defaultValue": "$(BANNERLORD_GAME_DIR)",
       "replaces": "$(ProjectGameFolder)",
@@ -36,21 +50,21 @@
     },
     "moduleId": {
       "type": "parameter",
-      "dataType": "string",
+      "datatype": "string",
       "description": "Module's internal id",
       "defaultValue": "$(MSBuildProjectName)",
       "replaces": "$(ProjectModuleId)"
     },
     "moduleName": {
       "type": "parameter",
-      "dataType": "string",
+      "datatype": "string",
       "description": "Module's display name",
       "defaultValue": "$(MSBuildProjectName)",
       "replaces": "$(ProjectModuleName)"
     },
     "InstallHarmony": {
       "type": "parameter",
-      "dataType": "choice",
+      "datatype": "choice",
       "description": "Specifies if Harmony should be installed",
       "choices": [
         {
@@ -66,7 +80,7 @@
     },
     "InstallButterLib": {
       "type": "parameter",
-      "dataType": "choice",
+      "datatype": "choice",
       "description": "Specifies if Bannerlord.ButterLib should be installed",
       "choices": [
         {
@@ -82,7 +96,7 @@
     },
     "InstallUIExtenderEx": {
       "type": "parameter",
-      "dataType": "choice",
+      "datatype": "choice",
       "description": "Specifies if Bannerlord.UIExtenderEx should be installed",
       "choices": [
         {
@@ -134,7 +148,7 @@
     },
     "gameVersion": {
       "type": "parameter",
-      "dataType": "string",
+      "datatype": "string",
       "description": "Version of Bannerlord that Reference Assemblies will use",
       "defaultValue": "1.0.0",
       "replaces": "$(ProjectGameVersion)",
