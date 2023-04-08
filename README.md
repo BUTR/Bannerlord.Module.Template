@@ -17,16 +17,16 @@
 ## Creating a new Module
 
 ### Creating from command line:
-1. Choose a project template i.e. `blmodfx`.
+1. Choose a project template i.e. `blmodfx` or `blmodsdk`.
 2. Run `dotnet new blmodfx --help` to see how to select the feature of the project.
 3. Run `dotnet new blmodfx --name "Bannerlord.MyModule"` along with any other custom options to create a project from the template.
 
 ### Creating via Visual Studio
 You need to have at least an 16.8.x version to create the template!  
-You also need to use the new template feature:  
-<p>
-   <img src="https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2020/09/clitemplates-option-enable.png" width="600">
-</p>
+
+### Creating via Rider
+Technically you can create the project from Rider, but Rider does not provide the configuration like Visual Studio does.  
+We recommend to either create the project from VS or the dotnet CLI and then use it in RIder.
 
 ## FAQ
 ### What are the differences between 'soft-dependency' and 'hard-dependency?
@@ -36,8 +36,14 @@ You also need to use the new template feature:
 `$(BANNERLORD_GAME_DIR)` is an environment variable. We think that it would be best to set it once on the system instead of hardcoding the game path in the project.  
 Feel free to replace it with a full folder path like `C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord` if you don't want to use the environment variable.  
 ### What is this variable 'Module Name'?
-`$(MSBuildProjectName)` is a MSBuild built-in variable that returns the file name of the project file without the file name extension; for example, `Bannerlord.Module1`.  
+`$(MSBuildProjectName)` is a MSBuild built-in variable that returns the file name of the project file without the file name extension; for example, `Bannerlord.Module1`. 
+### What is this variable 'Module Url'?
+If you plan to host your mod on NexusMods or Steam Workshop, we recommend to create a page there and the pase the url for this variable!  
 If you don't plan on keeping the Module folder name the same as the project that is being created, override it.  
+### What is this variable 'Install Community Module Loader'?
+See [Bannerlord.ModuleLoader](https://github.com/BUTR/Bannerlord.ModuleLoader).
+### What is this variable 'Require BLSE Features'?
+See [Bannerlord.BLSE](https://github.com/BUTR/Bannerlord.BLSE#features).
 ### What is this variable 'Language Version'?
 The version of C# that is used. By default, the value is `9.0`, which is the latest currently.  
 ### Should I set 'Use Nullable Feature'?
