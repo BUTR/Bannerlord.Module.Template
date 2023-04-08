@@ -31,11 +31,11 @@
 ---#if (ReferenceMCM)
     <DependedModule Id="Bannerlord.MBOptionScreen" DependentVersion="v$mcmversion$" />
 ---#endif
-    <DependedModule Id="Native" DependentVersion="v$gameversion$" />
-    <DependedModule Id="SandBoxCore" DependentVersion="v$gameversion$" />
-    <DependedModule Id="Sandbox" DependentVersion="v$gameversion$" />
-    <DependedModule Id="StoryMode" DependentVersion="v$gameversion$" />
-    <DependedModule Id="CustomBattle" DependentVersion="v$gameversion$" />
+    <DependedModule Id="Native" DependentVersion="$gameversion$" />
+    <DependedModule Id="SandBoxCore" DependentVersion="$gameversion$" />
+    <DependedModule Id="Sandbox" DependentVersion="$gameversion$" />
+    <DependedModule Id="StoryMode" DependentVersion="$gameversion$" />
+    <DependedModule Id="CustomBattle" DependentVersion="$gameversion$" />
   </DependedModules>
   <!-- Community Dependency Metadata -->
   <!-- https://github.com/BUTR/Bannerlord.BLSE#for-modders -->
@@ -52,11 +52,11 @@
     ---#if (ReferenceMCM)
     <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" version="v$mcmversion$" />
     ---#endif
-    <DependedModuleMetadata id="Native" order="LoadBeforeThis" version="v$gameversion$.*" />
-    <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" version="v$gameversion$.*" />
-    <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" version="v$gameversion$.*" />
-    <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" version="v$gameversion$.*" />
-    <DependedModuleMetadata id="CustomBattle" order="LoadBeforeThis" version="v$gameversion$.*" />
+    <DependedModuleMetadata id="Native" order="LoadBeforeThis" version="$gameversion$.*" />
+    <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" version="$gameversion$.*" />
+    <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" version="$gameversion$.*" />
+    <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" version="$gameversion$.*" />
+    <DependedModuleMetadata id="CustomBattle" order="LoadBeforeThis" version="$gameversion$.*" />
   </DependedModuleMetadatas>
   <SubModules>
 ---#if (ReferenceMCMAsSoftDependency)
