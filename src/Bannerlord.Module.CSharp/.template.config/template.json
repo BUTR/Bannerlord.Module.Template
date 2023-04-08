@@ -243,7 +243,7 @@
     
     "RunHarmony": {
       "type": "computed",
-      "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\")"
+      "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\" || AddBLSELoadingInterceptor == \"true\" || AddBLSEAssemblyResolver == \"true\")"
     },
     "RunButterLib": {
       "type": "computed",

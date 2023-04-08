@@ -201,7 +201,7 @@
     
     "ReferenceHarmony": {
       "type": "computed",
-      "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\")"
+      "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\" || InstallModuleLoader == \"install\")"
     },
     "ReferenceButterLib": {
       "type": "computed",
@@ -226,7 +226,7 @@
     
     "RunHarmony": {
       "type": "computed",
-      "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\")"
+      "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\" || InstallModuleLoader == \"install\" || AddBLSELoadingInterceptor == \"true\" || AddBLSEAssemblyResolver == \"true\")"
     },
     "RunButterLib": {
       "type": "computed",
