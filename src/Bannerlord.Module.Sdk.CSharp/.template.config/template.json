@@ -164,6 +164,10 @@
       "allowMultipleValues": true,
       "choices": [
         {
+          "choice": "do-not-require-anything",
+          "description": "Do not require BLSE."
+        },
+        {
           "choice": "loading-interceptor",
           "description": "Loading Interceptor. Gives earlier control for Modules."
         },
@@ -172,7 +176,7 @@
           "description": "Assembly Resolver. Changes the game's assembly loading priority."
         }
       ],
-      "defaultValue": ""
+      "defaultValue": "do-not-require-anything"
     },
    
     "langVersion": {
