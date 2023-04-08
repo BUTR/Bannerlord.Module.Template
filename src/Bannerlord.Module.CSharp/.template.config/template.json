@@ -36,6 +36,7 @@
       "defaultValue": "true",
       "replaces": "$(ProjectBuildForWindowsStore)"
     },
+    
     "gameFolder": {
       "type": "parameter",
       "datatype": "string",
@@ -48,6 +49,7 @@
         ]
       }
     },
+    
     "moduleId": {
       "type": "parameter",
       "datatype": "string",
@@ -62,6 +64,14 @@
       "defaultValue": "$(MSBuildProjectName)",
       "replaces": "$(ProjectModuleName)"
     },
+    "moduleUrl": {
+      "type": "parameter",
+      "dataType": "string",
+      "description": "Module's url to it's public page (NexusMods, Steam Workshop, GitHub)",
+      "defaultValue": "",
+      "replaces": "$(ProjectModuleUrl)"
+    },
+    
     "InstallHarmony": {
       "type": "parameter",
       "datatype": "choice",
@@ -146,6 +156,25 @@
       ],
       "defaultValue": "do-not-install"
     },
+
+    "RequireBLSEFeatures": {
+      "type": "parameter",
+      "dataType": "choice",
+      "description": "Require Bannerlord Software Extender (BLSE) Features",
+      "allowMultipleValues": true,
+      "choices": [
+        {
+          "choice": "loading-interceptor",
+          "description": "Loading Interceptor. Gives earlier control for Modules."
+        },
+        {
+          "choice": "assembly-resolver",
+          "description": "Assembly Resolver. Changes the game's assembly loading priority."
+        }
+      ],
+      "defaultValue": ""
+    },
+    
     "gameVersion": {
       "type": "parameter",
       "datatype": "string",
@@ -158,6 +187,7 @@
         ]
       }
     },
+    
     "langVersion": {
       "type": "parameter",
       "datatype": "text",
@@ -177,6 +207,7 @@
       "description": "If specified, skips the automatic restore of the project on create.",
       "defaultValue": "false"
     },
+    
     "ReferenceHarmony": {
       "type": "computed",
       "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\")"
@@ -205,6 +236,7 @@
       "type": "computed",
       "value": "(InstallReferenceAssemblies == \"do-not-install\")"
     },
+    
     "RunHarmony": {
       "type": "computed",
       "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\")"
@@ -220,6 +252,15 @@
     "RunMCM": {
       "type": "computed",
       "value": "(InstallMCM == \"hard-dependency\")"
+    },
+
+    "AddBLSELoadingInterceptor": {
+      "type": "computed",
+      "value": "(RequireBLSEFeatures == \"loading-interceptor\")"
+    },
+    "AddBLSEAssemblyResolver": {
+      "type": "computed",
+      "value": "(RequireBLSEFeatures == \"assembly-resolver\")"
     }
   },
   "forms": {

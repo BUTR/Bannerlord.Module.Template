@@ -10,6 +10,7 @@
     <BuildForWindowsStore>$(ProjectBuildForWindowsStore)</BuildForWindowsStore>
     <ModuleId>$(ProjectModuleId)</ModuleId>
     <ModuleName>$(ProjectModuleName)</ModuleName>
+    <ModuleUrl>$(ProjectModuleUrl)</ModuleUrl>
     <GameFolder>$(ProjectGameFolder)</GameFolder>
     <GameBinariesFolder Condition="Exists('$(GameFolder)\bin\Win64_Shipping_Client')">Win64_Shipping_Client</GameBinariesFolder>
     <GameBinariesFolder Condition="Exists('$(GameFolder)\bin\Gaming.Desktop.x64_Shipping_Client')">Gaming.Desktop.x64_Shipping_Client</GameBinariesFolder>

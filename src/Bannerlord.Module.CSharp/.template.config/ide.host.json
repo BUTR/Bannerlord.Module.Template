@@ -40,6 +40,13 @@
       "isVisible": true
     },
     {
+      "id": "moduleUrl",
+      "name": {
+        "text": "Module Url"
+      },
+      "isVisible": true
+    },
+    {
       "id": "InstallHarmony",
       "name": {
         "text": "Install Harmony"
@@ -148,6 +155,13 @@
           }
         }
       ],
+      "isVisible": true
+    },
+    {
+      "id": "RequireBLSEFeatures",
+      "name": {
+        "text": "Require BLSE Features"
+      },
       "isVisible": true
     },
     {

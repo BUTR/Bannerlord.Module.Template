@@ -40,6 +40,34 @@
       "isVisible": true
     },
     {
+      "id": "moduleUrl",
+      "name": {
+        "text": "Module Url"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "InstallModuleLoader",
+      "name": {
+        "text": "Install the Community Module Loader"
+      },
+      "choices": [
+        {
+          "id": "do-not-install",
+          "name": {
+            "text": "Do not install"
+          }
+        },
+        {
+          "id": "hard-dependency",
+          "name": {
+            "text": "Install and add reference in SubModule.xml"
+          }
+        }
+      ],
+      "isVisible": true
+    },
+    {
       "id": "InstallHarmony",
       "name": {
         "text": "Install Harmony"
@@ -127,6 +155,13 @@
           }
         }
       ],
+      "isVisible": true
+    },
+    {
+      "id": "RequireBLSEFeatures",
+      "name": {
+        "text": "Require BLSE Features"
+      },
       "isVisible": true
     },
     {

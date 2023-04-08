@@ -21,6 +21,14 @@
       "longName": "module-name",
       "shortName": ""
     },
+    "moduleUrl": {
+      "longName": "module-url",
+      "shortName": ""
+    },
+    "InstallModuleLoader": {
+      "longName": "install-module-loader",
+      "shortName": ""
+    },
     "InstallHarmony": {
       "longName": "install-harmony",
       "shortName": ""
@@ -35,6 +43,10 @@
     },
     "InstallMCM": {
       "longName": "install-mcm",
+      "shortName": ""
+    },
+    "RequireBLSEFeatures": {
+      "longName": "require-blse-features",
       "shortName": ""
     },
     "langVersion": {

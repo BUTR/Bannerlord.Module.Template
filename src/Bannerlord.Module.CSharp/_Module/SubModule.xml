@@ -1,51 +1,78 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Module xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
         xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/BUTR/Bannerlord.XmlSchemas/master/SubModule.xsd" >
-  <Id value="$modulename$" />
+  <Id value="$moduleid$" />
   <Name value="$modulename$" />
   <Version value="v$version$" />
   <DefaultModule value="false" />
   <ModuleCategory value="Singleplayer"/>
   <ModuleType value="Community" />
+  <Url value="$moduleurl$" />
   <DependedModules>
+---#if (AddBLSELoadingInterceptor)
+    <!-- BLSE or any launcher that provides this feature will ignore this Dependency-marker -->
+    <!-- but the default launcher will not let this module to be loaded -->
+    <DependedModule Id="BLSE.LoadingInterceptor" Optional="false" />
+---#endif
+---#if (AddBLSEAssemblyResolver)
+    <!-- BLSE or any launcher that provides this feature will ignore this Dependency-marker -->
+    <!-- but the default launcher will not let this module to be loaded -->
+    <DependedModule Id="BLSE.AssemblyResolver" Optional="false" />
+---#endif
 ---#if (ReferenceHarmony)
-    <DependedModule Id="Bannerlord.Harmony" />
+    <DependedModule Id="Bannerlord.Harmony" DependentVersion="v2.2.2" />
 ---#endif
 ---#if (ReferenceButterLib)
-    <DependedModule Id="Bannerlord.ButterLib" />
+    <DependedModule Id="Bannerlord.ButterLib" DependentVersion="v2.8.0" />
 ---#endif
 ---#if (ReferenceUIExtenderEx)
-    <DependedModule Id="Bannerlord.UIExtenderEx" />
+    <DependedModule Id="Bannerlord.UIExtenderEx" DependentVersion="v2.8.0" />
 ---#endif
 ---#if (ReferenceMCM)
-    <DependedModule Id="Bannerlord.MBOptionScreen" />
+    <DependedModule Id="Bannerlord.MBOptionScreen" DependentVersion="v5.7.1" />
 ---#endif
+---#if (ReferenceReferenceAssemblies)
+    <DependedModule Id="Native" DependentVersion="v$gameversion$" />
+    <DependedModule Id="SandBoxCore" DependentVersion="v$gameversion$" />
+    <DependedModule Id="Sandbox" DependentVersion="v$gameversion$" />
+    <DependedModule Id="StoryMode" DependentVersion="v$gameversion$" />
+    <DependedModule Id="CustomBattle" DependentVersion="v$gameversion$" />
+---#else
     <DependedModule Id="Native" />
     <DependedModule Id="SandBoxCore" />
     <DependedModule Id="Sandbox" />
     <DependedModule Id="StoryMode" />
     <DependedModule Id="CustomBattle" />
+---#endif
   </DependedModules>
   <!-- Community Dependency Metadata -->
-  <!-- https://github.com/BUTR/Bannerlord.BUTRLoader#for-modders -->
+  <!-- https://github.com/BUTR/Bannerlord.BLSE#for-modders -->
   <DependedModuleMetadatas>
 ---#if (ReferenceHarmony)
-    <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" />
+    <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="v2.2.2" />
 ---#endif
 ---#if (ReferenceButterLib)
-    <DependedModuleMetadata id="Bannerlord.ButterLib" order="LoadBeforeThis" />
+    <DependedModuleMetadata id="Bannerlord.ButterLib" order="LoadBeforeThis" version="v2.8.0" />
 ---#endif
 ---#if (ReferenceUIExtenderEx)
-    <DependedModuleMetadata id="Bannerlord.UIExtenderEx" order="LoadBeforeThis" />
+    <DependedModuleMetadata id="Bannerlord.UIExtenderEx" order="LoadBeforeThis" version="v2.8.0" />
 ---#endif
 ---#if (ReferenceMCM)
-    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" />
+    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" version="v5.7.1" />
 ---#endif
+---#if (ReferenceReferenceAssemblies)
+    <DependedModuleMetadata id="Native" order="LoadBeforeThis" version="v$gameversion$.*" />
+    <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" version="v$gameversion$.*" />
+    <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" version="v$gameversion$.*" />
+    <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" version="v$gameversion$.*" />
+    <DependedModuleMetadata id="CustomBattle" order="LoadBeforeThis" version="v$gameversion$.*" />
+---#else
     <DependedModuleMetadata id="Native" order="LoadBeforeThis" />
     <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" />
     <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" />
     <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" />
     <DependedModuleMetadata id="CustomBattle" order="LoadBeforeThis" />
+---#endif
   </DependedModuleMetadatas>
   <!-- Community Dependency Metadata -->
   <SubModules>

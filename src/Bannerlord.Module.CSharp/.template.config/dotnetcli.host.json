@@ -21,6 +21,10 @@
       "longName": "module-name",
       "shortName": ""
     },
+    "moduleUrl": {
+      "longName": "module-url",
+      "shortName": ""
+    },
     "InstallHarmony": {
       "longName": "install-harmony",
       "shortName": ""
@@ -39,6 +43,10 @@
     },
     "InstallReferenceAssemblies": {
       "longName": "install-reference-assemblies",
+      "shortName": ""
+    },
+    "RequireBLSEFeatures": {
+      "longName": "require-blse-features",
       "shortName": ""
     },
     "gameVersion": {

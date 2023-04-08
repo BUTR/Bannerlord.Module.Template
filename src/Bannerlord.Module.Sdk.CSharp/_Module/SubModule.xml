@@ -7,7 +7,18 @@
   <DefaultModule value="false" />
   <ModuleCategory value="Singleplayer"/>
   <ModuleType value="Community" />
+  <Url value="$moduleurl$" />
   <DependedModules>
+---#if (AddBLSELoadingInterceptor)
+    <!-- BLSE or any launcher that provides this feature will ignore this Dependency-marker -->
+    <!-- but the default launcher will not let this module to be loaded -->
+    <DependedModule Id="BLSE.LoadingInterceptor" Optional="false" />
+---#endif
+---#if (AddBLSEAssemblyResolver)
+    <!-- BLSE or any launcher that provides this feature will ignore this Dependency-marker -->
+    <!-- but the default launcher will not let this module to be loaded -->
+    <DependedModule Id="BLSE.AssemblyResolver" Optional="false" />
+---#endif
 ---#if (ReferenceHarmony)
     <DependedModule Id="Bannerlord.Harmony" DependentVersion="v$harmonyversion$" />
 ---#endif
@@ -27,7 +38,7 @@
     <DependedModule Id="CustomBattle" DependentVersion="v$gameversion$" />
   </DependedModules>
   <!-- Community Dependency Metadata -->
-  <!-- https://github.com/BUTR/Bannerlord.BUTRLoader#for-modders -->
+  <!-- https://github.com/BUTR/Bannerlord.BLSE#for-modders -->
   <DependedModuleMetadatas>
     ---#if (ReferenceHarmony)
     <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="v$harmonyversion$" />

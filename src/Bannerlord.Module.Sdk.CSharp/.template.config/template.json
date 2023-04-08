@@ -5,7 +5,7 @@
     "Bannerlord",
     "Games"
   ],
-  "name": "Mount & Blade 2: Bannerlord Module with Sdk",
+  "name": "Mount & Blade 2: Bannerlord Module (BUTR Sdk)",
   "generatorVersions": "[1.0.0.0-*)",
   "description": "Project template for Mount & Blade 2: Bannerlord with BUTR's Sdk.",
   "groupIdentity": "Bannerlord.Module.Sdk",
@@ -36,6 +36,7 @@
       "defaultValue": "true",
       "replaces": "$(ProjectBuildForWindowsStore)"
     },
+    
     "gameFolder": {
       "type": "parameter",
       "dataType": "string",
@@ -48,6 +49,7 @@
         ]
       }
     },
+    
     "moduleId": {
       "type": "parameter",
       "dataType": "string",
@@ -61,6 +63,30 @@
       "description": "Module's display name",
       "defaultValue": "$(MSBuildProjectName)",
       "replaces": "$(ProjectModuleName)"
+    },
+    "moduleUrl": {
+      "type": "parameter",
+      "dataType": "string",
+      "description": "Module's url to it's public page (NexusMods, Steam Workshop, GitHub)",
+      "defaultValue": "",
+      "replaces": "$(ProjectModuleUrl)"
+    },
+    
+    "InstallModuleLoader": {
+      "type": "parameter",
+      "datatype": "choice",
+      "description": "Specifies if the community Module Loader should be used. It provides support for multiple game versions within one module",
+      "choices": [
+        {
+          "choice": "do-not-install",
+          "description": "Do not install the community Module Loader"
+        },
+        {
+          "choice": "install",
+          "description": "Install the community Module Loader"
+        }
+      ],
+      "defaultValue": "do-not-install"
     },
     "InstallHarmony": {
       "type": "parameter",
@@ -130,22 +156,25 @@
       ],
       "defaultValue": "do-not-install"
     },
-    "InstallModuleLoader": {
+    
+    "RequireBLSEFeatures": {
       "type": "parameter",
-      "datatype": "choice",
-      "description": "Specifies if the community Module Loader should be used.",
+      "dataType": "choice",
+      "description": "Require Bannerlord Software Extender (BLSE) Features",
+      "allowMultipleValues": true,
       "choices": [
         {
-          "choice": "do-not-install",
-          "description": "Do not install the community Module Loader"
+          "choice": "loading-interceptor",
+          "description": "Loading Interceptor. Gives earlier control for Modules."
         },
         {
-          "choice": "install",
-          "description": "Install the community Module Loader"
+          "choice": "assembly-resolver",
+          "description": "Assembly Resolver. Changes the game's assembly loading priority."
         }
       ],
-      "defaultValue": "do-not-install"
+      "defaultValue": ""
     },
+   
     "langVersion": {
       "type": "parameter",
       "datatype": "text",
@@ -190,6 +219,7 @@
       "type": "computed",
       "value": "(InstallModuleLoader == \"install\")"
     },
+    
     "RunHarmony": {
       "type": "computed",
       "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\")"
@@ -205,6 +235,15 @@
     "RunMCM": {
       "type": "computed",
       "value": "(InstallMCM == \"hard-dependency\")"
+    },
+    
+    "AddBLSELoadingInterceptor": {
+      "type": "computed",
+      "value": "(RequireBLSEFeatures == \"loading-interceptor\")"
+    },
+    "AddBLSEAssemblyResolver": {
+      "type": "computed",
+      "value": "(RequireBLSEFeatures == \"assembly-resolver\")"
     }
   },
   "forms": {
