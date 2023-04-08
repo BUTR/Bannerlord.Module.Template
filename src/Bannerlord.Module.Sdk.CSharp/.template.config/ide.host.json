@@ -59,9 +59,9 @@
           }
         },
         {
-          "id": "hard-dependency",
+          "id": "install",
           "name": {
-            "text": "Install and add reference in SubModule.xml"
+            "text": "Install"
           }
         }
       ],

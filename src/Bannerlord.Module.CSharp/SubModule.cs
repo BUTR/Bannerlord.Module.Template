@@ -3,15 +3,15 @@
 #if( AddBLSELoadingInterceptor )
 namespace Bannerlord.BUTRLoader
 {
-    [AttributeUsage(AttributeTargets.Class)]
-    public sealed class BLSEInterceptorAttribute : Attribute { }
+    [System.AttributeUsage(System.AttributeTargets.Class)]
+    public sealed class BLSEInterceptorAttribute : System.Attribute { }
 }
 #endif
 
 namespace BLNamespace
 {
 #if( AddBLSELoadingInterceptor )
-    [BLSEInterceptor]
+    [Bannerlord.BUTRLoader.BLSEInterceptor]
     public static class BLSELoadingInterceptor
     {
         public static void OnInitializeSubModulesPrefix()
