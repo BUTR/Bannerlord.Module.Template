@@ -165,7 +165,7 @@
       "choices": [
         {
           "choice": "do-not-require-anything",
-          "description": "Do not require BLSE."
+          "description": "Do not require BLSE Features."
         },
         {
           "choice": "loading-interceptor",

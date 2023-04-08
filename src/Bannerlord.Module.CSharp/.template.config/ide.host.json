@@ -162,6 +162,26 @@
       "name": {
         "text": "Require BLSE Features"
       },
+      "choices": [
+        {
+          "id": "do-not-require-anything",
+          "name": {
+            "text": "Do not require BLSE Features"
+          }
+        },
+        {
+          "id": "loading-interceptor",
+          "name": {
+            "text": "Loading Interceptor"
+          }
+        },
+        {
+          "id": "assembly-resolver",
+          "name": {
+            "text": "Assembly Resolver"
+          }
+        }
+      ],
       "isVisible": true
     },
     {
