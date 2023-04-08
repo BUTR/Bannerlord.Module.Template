@@ -3,7 +3,10 @@
   "author": "BUTR Team",
   "classifications": [
     "Bannerlord",
-    "Games"
+    "Games",
+    "Windows",
+    "Desktop",
+    "Xbox"
   ],
   "name": "Mount & Blade 2: Bannerlord Module (BUTR Sdk)",
   "generatorVersions": "[1.0.0.0-*)",
