@@ -26,34 +26,44 @@ You need to have at least an 16.8.x version to create the template!
 
 ### Creating via Rider
 Technically you can create the project from Rider, but Rider does not provide the configuration like Visual Studio does.  
-We recommend to either create the project from VS or the dotnet CLI and then use it in RIder.
+We recommend to either create the project from VS or the dotnet CLI and then use it in Rider.
 
 ## FAQ
 ### What are the differences between 'soft-dependency' and 'hard-dependency?
 **Hard dependency** means that an entry will be added to `SubModules.xml`. Your Module will not include the dependency inside it's `/bin` folder (the .dll). It won't allow the game to run your mod without the dependency installed as a separate Module. This is an important feature to prevent having multiple versions of the same dependency running within the game.  
 **Soft dependency** means that nothing will be added to `SubModules.xml`. Your Module will include the dependency inside it's `/bin` folder (the .dll).
+
 ### What is this variable 'Bannerlord Game Folder Location'?
 `$(BANNERLORD_GAME_DIR)` is an environment variable. We think that it would be best to set it once on the system instead of hardcoding the game path in the project.  
 Feel free to replace it with a full folder path like `C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord` if you don't want to use the environment variable.  
+
 ### What is this variable 'Module Name'?
 `$(MSBuildProjectName)` is a MSBuild built-in variable that returns the file name of the project file without the file name extension; for example, `Bannerlord.Module1`. 
+
 ### What is this variable 'Module Url'?
-If you plan to host your mod on NexusMods or Steam Workshop, we recommend to create a page there and the pase the url for this variable!  
+If you plan to host your mod on NexusMods or Steam Workshop, we recommend to create a page there and the set the url for this variable!  
 If you don't plan on keeping the Module folder name the same as the project that is being created, override it.  
+
 ### What is this variable 'Install Community Module Loader'?
 See [Bannerlord.ModuleLoader](https://github.com/BUTR/Bannerlord.ModuleLoader).
+
 ### What is this variable 'Require BLSE Features'?
 See [Bannerlord.BLSE](https://github.com/BUTR/Bannerlord.BLSE#features).
+
 ### What is this variable 'Language Version'?
 The version of C# that is used. By default, the value is `9.0`, which is the latest currently.  
+
 ### Should I set 'Use Nullable Feature'?
 Read the [docs](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references) on Nullable reference types to decide if you need this feature!  
+
 ### What are those '$SOMETHING$' variables inside SubModules.xml?
 Those are variables that will be replaced with real values when the project is built.  
 * **$modulename$** is the varible you passed in `Module Name` when creating the Module. It is the `<ModuleName>` property used in your project file (`.csproj`)
 * **$version$** is the `<Version>` property used in your project file (`.csproj`)
+
 ### What is the '\_Module' folder inside the project?
 It is the root Module folder that copies everything that is placed there inside the output.
+
 ### I build my project and a folder with my Module was created in `GAMEPATH/Modules`!
 This is one of the features that this project template provides.  
 If the `<ModuleName>` and `<GameFolder>` properties are valid, your Module will be copied in the game's `/Modules` folder automatically. You can test your Module without the need of creating a script that will move everything inside the game's Modules folder.
