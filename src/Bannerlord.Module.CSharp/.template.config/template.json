@@ -268,6 +268,11 @@
     "AddBLSEAssemblyResolver": {
       "type": "computed",
       "value": "(RequireBLSEFeatures == \"assembly-resolver\")"
+    },
+
+    "HostIdentifier": {
+      "type": "bind",
+      "binding": "HostIdentifier"
     }
   },
   "forms": {
@@ -281,7 +286,7 @@
       "path": "BLNamespace.csproj"
     },
     {
-      "condition":"(HostIdentifier != \"dotnetcli\")",
+      "condition":"(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
       "path":"SubModule.cs"
     }
   ],
@@ -298,7 +303,7 @@
       "continueOnError": true
     },
     {
-      "condition":"(HostIdentifier != \"dotnetcli\")",
+      "condition":"(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
       "description":"Opens SubModule.cs in the editor",
       "manualInstructions":[
         
