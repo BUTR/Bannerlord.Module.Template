@@ -1,4 +1,4 @@
-<Project Sdk="Bannerlord.BUTRModule.Sdk/1.10.99">
+<Project Sdk="Bannerlord.BUTRModule.Sdk/1.1.0.102">
 
   <PropertyGroup>
     <Version>0.0.1</Version>
@@ -24,8 +24,8 @@
   <PropertyGroup>
     <HarmonyVersion Condition="'$(ReferenceHarmony)' == 'true'">2.2.2</HarmonyVersion>
     <UIExtenderExVersion Condition="'$(ReferenceUIExtenderEx)' == 'true'">2.8.0</UIExtenderExVersion>
-    <ButterLibVersion Condition="'$(ReferenceButterLib)' == 'true'">2.8.0</ButterLibVersion>
-    <MCMVersion Condition="'$(ReferenceMCM)' == 'true'">5.7.1</MCMVersion>
+    <ButterLibVersion Condition="'$(ReferenceButterLib)' == 'true'">2.8.8</ButterLibVersion>
+    <MCMVersion Condition="'$(ReferenceMCM)' == 'true'">5.7.2</MCMVersion>
     <BUTRModuleLoaderVersion Condition="'$(ReferenceModuleLoader)' == 'true'">1.0.1.44</BUTRModuleLoaderVersion>
     <HarmonyExtensionsVersion>3.2.0.77</HarmonyExtensionsVersion>
     <!--
@@ -36,7 +36,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" PrivateAssets="all" IncludeAssets="compile" />
-    <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="BUTR.Harmony.Analyzer" Version="1.0.1.44" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
+    <PackageReference Condition="'$(ReferenceHarmony)' == 'true'" Include="BUTR.Harmony.Analyzer" Version="1.0.1.50" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
     <PackageReference Condition="'$(ReferenceMCM)' == 'true' AND '$(ReferenceMCMAsSoftDependency)' == 'true'" Include="Bannerlord.MCM" Version="$(MCMVersion)" />
   </ItemGroup>
   
