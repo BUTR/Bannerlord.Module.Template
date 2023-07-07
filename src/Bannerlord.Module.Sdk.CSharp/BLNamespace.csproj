@@ -1,4 +1,4 @@
-<Project Sdk="Bannerlord.BUTRModule.Sdk/1.1.0.102">
+<Project Sdk="Bannerlord.BUTRModule.Sdk/1.1.0.103">
 
   <PropertyGroup>
     <Version>0.0.1</Version>
