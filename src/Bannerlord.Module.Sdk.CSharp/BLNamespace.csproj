@@ -43,8 +43,8 @@
   <PropertyGroup>
     <HarmonyVersion Condition="'$(ReferenceHarmony)' == 'true'">2.2.2</HarmonyVersion>
     <UIExtenderExVersion Condition="'$(ReferenceUIExtenderEx)' == 'true'">2.8.0</UIExtenderExVersion>
-    <ButterLibVersion Condition="'$(ReferenceButterLib)' == 'true'">2.8.8</ButterLibVersion>
-    <MCMVersion Condition="'$(ReferenceMCM)' == 'true'">5.7.2</MCMVersion>
+    <ButterLibVersion Condition="'$(ReferenceButterLib)' == 'true'">2.8.11</ButterLibVersion>
+    <MCMVersion Condition="'$(ReferenceMCM)' == 'true'">5.9.1</MCMVersion>
     <BUTRModuleLoaderVersion Condition="'$(ReferenceModuleLoader)' == 'true'">1.0.1.44</BUTRModuleLoaderVersion>
     <HarmonyExtensionsVersion>3.2.0.77</HarmonyExtensionsVersion>
     <!--

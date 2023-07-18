@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:       
     - name: Setup
-      uses: butr/actions-common-setup@v2.0
+      uses: butr/actions-common-setup@v2
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         fetch-depth: 0
