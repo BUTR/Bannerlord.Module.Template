@@ -13,10 +13,8 @@
     <LangVersion Condition="'$(langVersion)' != ''">$(ProjectLanguageVersion)</LangVersion>
     <Nullable Condition="'$(nullable)' != ''">enable</Nullable>
 
-    <!-- Steam/GOG/Epic versions of the game -->
-    <BuildForWindows>$(ProjectBuildForWindows)</BuildForWindows>
-    <!-- Xbox Game Pass PC version of the game -->
-    <BuildForWindowsStore>$(ProjectBuildForWindowsStore)</BuildForWindowsStore>
+    <BuildForWindows>false</BuildForWindows>
+    <BuildForWindowsStore>false</BuildForWindowsStore>
     
     <ModuleId>$(ProjectModuleId)</ModuleId>
     <ModuleName>$(ProjectModuleName)</ModuleName>
@@ -28,11 +26,13 @@
 
 <!--#if (gameWindows) -->
   <PropertyGroup Condition="$(TargetFramework) == 'net472'">
+    <!-- Steam/GOG/Epic versions of the game -->
     <BuildForWindows>true</BuildForWindows>
   </PropertyGroup>
 <!--#endif -->
 <!--#if (gameWindowsStore) -->
   <PropertyGroup Condition="$(TargetFramework) == 'netcoreapp3.1'">
+    <!-- Xbox Game Pass PC version of the game -->
     <BuildForWindowsStore>false</BuildForWindowsStore>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>

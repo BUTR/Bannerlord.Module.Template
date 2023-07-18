@@ -29,15 +29,13 @@
       "type": "parameter",
       "datatype": "bool",
       "description": "Target the Steam/GOG/Epic version of the game",
-      "defaultValue": "true",
-      "replaces": "$(ProjectBuildForWindows)"
+      "defaultValue": "true"
     },
     "gameWindowsStore": {
       "type": "parameter",
       "datatype": "bool",
       "description": "Target the Windows Game Pass PC version of the game",
-      "defaultValue": "true",
-      "replaces": "$(ProjectBuildForWindowsStore)"
+      "defaultValue": "true"
     },
     
     "gameFolder": {

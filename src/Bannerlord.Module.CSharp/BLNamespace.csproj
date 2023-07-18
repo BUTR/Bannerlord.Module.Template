@@ -12,8 +12,8 @@
     <Platforms>x64</Platforms>
     <LangVersion Condition="'$(langVersion)' != ''">$(ProjectLanguageVersion)</LangVersion>
     <Nullable Condition="'$(nullable)' != ''">enable</Nullable>
-    <BuildForWindows>$(ProjectBuildForWindows)</BuildForWindows>
-    <BuildForWindowsStore>$(ProjectBuildForWindowsStore)</BuildForWindowsStore>
+    <BuildForWindows>false</BuildForWindows>
+    <BuildForWindowsStore>false</BuildForWindowsStore>
     <ModuleId>$(ProjectModuleId)</ModuleId>
     <ModuleName>$(ProjectModuleName)</ModuleName>
     <ModuleUrl>$(ProjectModuleUrl)</ModuleUrl>
