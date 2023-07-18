@@ -2,7 +2,13 @@
 
   <PropertyGroup>
     <Version>0.0.1</Version>
-    <TargetFramework>netstandard2.0</TargetFramework>
+<!--#if (gameWindows && gameWindowsStore) -->
+    <TargetFrameworks>net472;netcoreapp3.1</TargetFrameworks>
+<!--#elseif (gameWindows && !gameWindowsStore) -->
+    <TargetFramework>net472</TargetFramework>
+<!--#elseif (!gameWindows && gameWindowsStore) -->
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+<!--#endif -->
     <Platforms>x64</Platforms>
     <LangVersion Condition="'$(langVersion)' != ''">$(ProjectLanguageVersion)</LangVersion>
     <Nullable Condition="'$(nullable)' != ''">enable</Nullable>
@@ -19,6 +25,19 @@
     <!-- Module manually override GameVersion -->
     <!-- <OverrideGameVersion>v1.0.0</OverrideGameVersion> -->
   </PropertyGroup>
+
+<!--#if (gameWindows) -->
+  <PropertyGroup Condition="$(TargetFramework) == 'net472'">
+    <BuildForWindows>true</BuildForWindows>
+  </PropertyGroup>
+<!--#endif -->
+<!--#if (gameWindowsStore) -->
+  <PropertyGroup Condition="$(TargetFramework) == 'netcoreapp3.1'">
+    <BuildForWindowsStore>false</BuildForWindowsStore>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+<!--#endif -->
 
   <!-- Development Variables -->
   <PropertyGroup>

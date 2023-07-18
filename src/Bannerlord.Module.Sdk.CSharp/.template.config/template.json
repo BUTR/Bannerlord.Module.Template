@@ -299,30 +299,6 @@
     }
   ],
   "SpecialCustomOperations": {
-    "**/*.xml": {
-      "operations": [
-        {
-          "type": "conditional",
-          "configuration": {
-            "if": [
-              "---#if"
-            ],
-            "else": [
-              "---#else"
-            ],
-            "elseif": [
-              "---#elseif",
-              "---#elif"
-            ],
-            "endif": [
-              "---#endif"
-            ],
-            "trim": "true",
-            "wholeLine": "true"
-          }
-        }
-      ]
-    },
     "**/*.json": {
       "flagPrefix": "//",
       "operations": [

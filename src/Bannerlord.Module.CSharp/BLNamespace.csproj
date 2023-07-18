@@ -2,7 +2,13 @@
 
   <PropertyGroup>
     <Version>0.0.1</Version>
-    <TargetFramework>netstandard2.0</TargetFramework>
+<!--#if (gameWindows && gameWindowsStore) -->
+    <TargetFrameworks>net472;netcoreapp3.1</TargetFrameworks>
+<!--#elseif (gameWindows && !gameWindowsStore) -->
+    <TargetFramework>net472</TargetFramework>
+<!--#elseif (!gameWindows && gameWindowsStore) -->
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+<!--#endif -->
     <Platforms>x64</Platforms>
     <LangVersion Condition="'$(langVersion)' != ''">$(ProjectLanguageVersion)</LangVersion>
     <Nullable Condition="'$(nullable)' != ''">enable</Nullable>
@@ -12,10 +18,23 @@
     <ModuleName>$(ProjectModuleName)</ModuleName>
     <ModuleUrl>$(ProjectModuleUrl)</ModuleUrl>
     <GameFolder>$(ProjectGameFolder)</GameFolder>
-    <GameBinariesFolder Condition="Exists('$(GameFolder)\bin\Win64_Shipping_Client')">Win64_Shipping_Client</GameBinariesFolder>
-    <GameBinariesFolder Condition="Exists('$(GameFolder)\bin\Gaming.Desktop.x64_Shipping_Client')">Gaming.Desktop.x64_Shipping_Client</GameBinariesFolder>
+    <GameBinariesFolder Condition="Exists('$(GameFolder)\bin\Win64_Shipping_Client\Bannerlord.exe')">Win64_Shipping_Client</GameBinariesFolder>
+    <GameBinariesFolder Condition="Exists('$(GameFolder)\bin\Gaming.Desktop.x64_Shipping_Client\Bannerlord.exe')">Gaming.Desktop.x64_Shipping_Client</GameBinariesFolder>
     <GameVersion Condition="'$(ReferenceReferenceAssemblies)' == 'true'">$(ProjectGameVersion)</GameVersion>
   </PropertyGroup>
+
+<!--#if (gameWindows) -->
+  <PropertyGroup Condition="$(TargetFramework) == 'net472'">
+    <BuildForWindows>true</BuildForWindows>
+  </PropertyGroup>
+<!--#endif -->
+<!--#if (gameWindowsStore) -->
+  <PropertyGroup Condition="$(TargetFramework) == 'netcoreapp3.1'">
+    <BuildForWindowsStore>false</BuildForWindowsStore>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+<!--#endif -->
 
   <ItemGroup Condition="'$(ReferenceGameAssemblies)' == 'true'">
     <Reference Include="$(GameFolder)\bin\$(GameBinariesFolder)\Newtonsoft.Json.dll">
