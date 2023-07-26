@@ -283,11 +283,7 @@
         "datatype": "string",
         "cases": [
           {
-            "condition": "gameWindowsStore == null",
-            "value": "Win64_Shipping_Client"
-          },
-          {
-            "condition": "(gameWindowsStore == false)",
+            "condition": "(gameWindows == true)",
             "value": "Win64_Shipping_Client"
           },
           {
