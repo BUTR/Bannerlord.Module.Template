@@ -1,4 +1,3 @@
-// build task for C# bannerlord mod
 {
     "version": "2.0.0",
     "tasks": [
