@@ -193,6 +193,13 @@
       }
     },
     
+    "code": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Generate the project with this argument set to true if you intend to use VSCode as IDE",
+      "defaultValue": "false"
+    },
+
     "langVersion": {
       "type": "parameter",
       "datatype": "text",
@@ -268,6 +275,41 @@
       "value": "(RequireBLSEFeatures == \"assembly-resolver\")"
     },
 
+    "gameBinariesFolder": {
+      "type": "generated",
+      "generator": "switch",
+      "parameters": {
+        "evaluator": "C++",
+        "datatype": "string",
+        "cases": [
+          {
+            "condition": "gameWindowsStore == null",
+            "value": "Win64_Shipping_Client"
+          },
+          {
+            "condition": "(gameWindowsStore == false)",
+            "value": "Win64_Shipping_Client"
+          },
+          {
+            "condition": "(gameWindowsStore == true)",
+            "value": "Gaming.Desktop.x64_Shipping"
+          }
+        ]
+      },
+      "replaces": "BINARY_FOLDER"
+    },
+
+    "displayName":
+    {
+      "type": "generated",
+      "generator": "coalesce",
+      "parameters": {
+        "sourceVariableName": "moduleName",
+        "fallbackVariableName": "name"
+      },
+      "replaces": "MODULE_NAME"
+    },
+
     "HostIdentifier": {
       "type": "bind",
       "binding": "HostIdentifier"
@@ -279,6 +321,24 @@
     }
   },
   "defaultName": "Bannerlord.Module1",
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(code == false)",
+          "exclude": [
+            ".vscode/**"
+          ]
+        },
+        {
+          "condition": "(code == true)",
+          "exclude": [
+            "Properties/**"
+          ]
+        }
+      ] 
+    }
+  ],
   "primaryOutputs": [
     {
       "path": "BLNamespace.csproj"
