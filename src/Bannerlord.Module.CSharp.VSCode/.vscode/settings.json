@@ -1,0 +1,8 @@
+{
+    "moduleId": "BLNamespace",
+    "moduleName": "BLNamespace",
+    "moduleUrl": "{{ProjectModuleUrl}}",
+    "gameFolder": "{{ProjectGameFolder}}",
+    "gameBinaryFolder": "{{ProjectGameBinaryFolder}}",
+    "gameVersion": "{{ProjectGameVersion}}"
+}

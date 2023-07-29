@@ -8,13 +8,13 @@
     "Desktop",
     "Xbox"
   ],
-  "name": "Mount & Blade 2: Bannerlord Module (BUTR Sdk)",
+  "name": "Mount & Blade 2: Bannerlord Module VSCode",
   "generatorVersions": "[1.0.0.0-*)",
-  "description": "Project template for Mount & Blade 2: Bannerlord with BUTR's Sdk.",
-  "groupIdentity": "Bannerlord.Module.Sdk",
-  "precedence": "5000",
-  "identity": "Bannerlord.Module.Sdk.CSharp",
-  "shortName": "blmodsdk",
+  "description": "VSCode Project template for Mount & Blade 2: Bannerlord.",
+  "groupIdentity": "Bannerlord.Module.VSCode",
+  "precedence": "5001",
+  "identity": "Bannerlord.Module.CSharp.VSCode",
+  "shortName": "blmodfxvscode",
   "tags": {
     "language": "C#",
     "type": "project"
@@ -22,7 +22,7 @@
   "sourceName": "BLNamespace",
   "preferNameDirectory": true,
   "guids": [
-    "84889846-e8dd-4c24-a8ee-0099a0573896"
+    "84889846-e8dd-4c24-a8ee-0099a0573897"
   ],
   "symbols": {
     "gameWindows": {
@@ -37,61 +37,69 @@
       "description": "Target the Windows Game Pass PC version of the game",
       "defaultValue": "true"
     },
-    
-    "gameFolder": {
-      "type": "parameter",
+
+    // TODO: Game folder not being espaced for JSON
+    "evaluatedGameFolder": {
+      "type": "bind",
+      "binding": "env:BANNERLORD_GAME_DIR",
       "dataType": "string",
-      "description": "Path to Bannerlord's game folder",
-      "defaultValue": "$(BANNERLORD_GAME_DIR)",
-      "replaces": "$(ProjectGameFolder)",
       "forms": {
-        "global": [
-          "encode"
-        ]
+        "global": [ "pathReplace" ]
       }
     },
-    
-    "moduleId": {
+    "providedGameFolder": {
       "type": "parameter",
-      "dataType": "string",
-      "description": "Module's internal id",
-      "defaultValue": "$(MSBuildProjectName)",
-      "replaces": "$(ProjectModuleId)"
+      "datatype": "string",
+      "description": "Path to Bannerlord's game folder",
+      "defaultValue": "",
+      "forms": {
+        "global": [ "pathReplace" ]
+      }
     },
-    "moduleName": {
-      "type": "parameter",
-      "dataType": "string",
-      "description": "Module's display name",
-      "defaultValue": "$(MSBuildProjectName)",
-      "replaces": "$(ProjectModuleName)"
+    "gameFolder": {
+      "type": "generated",
+      "generator": "coalesce",
+      "parameters": {
+        "sourceVariableName": "providedGameFolder",
+        "fallbackVariableName": "evaluatedGameFolder"
+      },
+      "replaces": "{{ProjectGameFolder}}",
+      "forms": {
+        "global": [ "pathReplace" ]
+      }
     },
+
+    "gameBinariesFolder": {
+      "type": "generated",
+      "generator": "switch",
+      "parameters": {
+        "evaluator": "C++",
+        "datatype": "string",
+        "cases": [
+          {
+            "condition": "(gameWindows == true)",
+            "value": "Win64_Shipping_Client"
+          },
+          {
+            "condition": "(gameWindowsStore == true)",
+            "value": "Gaming.Desktop.x64_Shipping"
+          }
+        ]
+      },
+      "replaces": "{{ProjectGameBinaryFolder}}"
+    },
+
     "moduleUrl": {
       "type": "parameter",
       "dataType": "string",
       "description": "Module's url to it's public page (NexusMods, Steam Workshop, GitHub)",
       "defaultValue": "",
-      "replaces": "$(ProjectModuleUrl)"
+      "replaces": "{{ProjectModuleUrl}}"
     },
     
-    "InstallModuleLoader": {
-      "type": "parameter",
-      "datatype": "choice",
-      "description": "Specifies if the community Module Loader should be used. It provides support for multiple game versions within one module",
-      "choices": [
-        {
-          "choice": "do-not-install",
-          "description": "Do not install the community Module Loader"
-        },
-        {
-          "choice": "install",
-          "description": "Install the community Module Loader"
-        }
-      ],
-      "defaultValue": "do-not-install"
-    },
     "InstallHarmony": {
       "type": "parameter",
-      "dataType": "choice",
+      "datatype": "choice",
       "description": "Specifies if Harmony should be installed",
       "choices": [
         {
@@ -107,7 +115,7 @@
     },
     "InstallButterLib": {
       "type": "parameter",
-      "dataType": "choice",
+      "datatype": "choice",
       "description": "Specifies if Bannerlord.ButterLib should be installed",
       "choices": [
         {
@@ -123,7 +131,7 @@
     },
     "InstallUIExtenderEx": {
       "type": "parameter",
-      "dataType": "choice",
+      "datatype": "choice",
       "description": "Specifies if Bannerlord.UIExtenderEx should be installed",
       "choices": [
         {
@@ -157,7 +165,23 @@
       ],
       "defaultValue": "do-not-install"
     },
-    
+    "InstallReferenceAssemblies": {
+      "type": "parameter",
+      "datatype": "choice",
+      "description": "Specifies if the reference assemblies should be used instead of referencing the game assemblies from the game folder to compile against",
+      "choices": [
+        {
+          "choice": "do-not-install",
+          "description": "Do not install Reference Assemblies. Assemblies from the game's folder will be used instead"
+        },
+        {
+          "choice": "install",
+          "description": "Install Reference Assemblies"
+        }
+      ],
+      "defaultValue": "do-not-install"
+    },
+
     "RequireBLSEFeatures": {
       "type": "parameter",
       "dataType": "choice",
@@ -178,6 +202,17 @@
         }
       ],
       "defaultValue": "do-not-require-anything"
+    },
+    
+    "gameVersion": {
+      "type": "parameter",
+      "datatype": "string",
+      "description": "Version of Bannerlord that Reference Assemblies will use",
+      "defaultValue": "1.0.0",
+      "replaces": "{{ProjectGameVersion}}",
+      "forms": {
+        "global": [ "encode" ]
+      }
     },
 
     "langVersion": {
@@ -202,7 +237,7 @@
     
     "ReferenceHarmony": {
       "type": "computed",
-      "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\" || InstallModuleLoader == \"install\")"
+      "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\")"
     },
     "ReferenceButterLib": {
       "type": "computed",
@@ -220,14 +255,18 @@
       "type": "computed",
       "value": "(InstallMCM == \"soft-dependency\")"
     },
-    "ReferenceModuleLoader": {
+    "ReferenceReferenceAssemblies": {
       "type": "computed",
-      "value": "(InstallModuleLoader == \"install\")"
+      "value": "(InstallReferenceAssemblies == \"install\")"
+    },
+    "ReferenceGameAssemblies": {
+      "type": "computed",
+      "value": "(InstallReferenceAssemblies == \"do-not-install\")"
     },
     
     "RunHarmony": {
       "type": "computed",
-      "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\" || InstallModuleLoader == \"install\" || AddBLSELoadingInterceptor == \"true\" || AddBLSEAssemblyResolver == \"true\")"
+      "value": "(InstallHarmony == \"hard-dependency\" || InstallButterLib == \"hard-dependency\" || InstallUIExtenderEx == \"hard-dependency\" || InstallMCM == \"hard-dependency\" || InstallMCM == \"soft-dependency\" || AddBLSELoadingInterceptor == \"true\" || AddBLSEAssemblyResolver == \"true\")"
     },
     "RunButterLib": {
       "type": "computed",
@@ -241,7 +280,7 @@
       "type": "computed",
       "value": "(InstallMCM == \"hard-dependency\")"
     },
-    
+
     "AddBLSELoadingInterceptor": {
       "type": "computed",
       "value": "(RequireBLSEFeatures == \"loading-interceptor\")"
@@ -259,6 +298,11 @@
   "forms": {
     "encode": {
       "identifier": "xmlEncode"
+    },
+    "pathReplace": {
+      "identifier": "replace",
+      "pattern": "\\\\",
+      "replacement": "_"
     }
   },
   "defaultName": "Bannerlord.Module1",

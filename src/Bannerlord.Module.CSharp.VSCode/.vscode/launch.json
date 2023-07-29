@@ -6,12 +6,12 @@
             "type": "clr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${env:BANNERLORD_GAME_DIR}/bin/${config:gameBinaryFolder}/Bannerlord.exe",
+            "program": "${config:gameFolder}/bin/${config:gameBinaryFolder}/Bannerlord.exe",
             "args": [
                 "/singleplayer",
                 "_MODULES_*Native*SandBoxCore*CustomBattle*Sandbox*StoryMode*${config:moduleName}*_MODULES_"
             ],
-            "cwd": "${env:BANNERLORD_GAME_DIR}/bin/${config:gameBinaryFolder}",
+            "cwd": "${config:gameFolder}/bin/${config:gameBinaryFolder}",
             "stopAtEntry": false,
             "console": "internalConsole",
             "internalConsoleOptions": "openOnSessionStart",
