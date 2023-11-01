@@ -77,7 +77,7 @@
     <!-- Bannerlord Module Loader. Do not change the name! -->
     <SubModule>
       <Name value="Bannerlord Module Loader" />
-      <DLLName value="Bannerlord.ModuleLoader.dll" />
+      <DLLName value="Bannerlord.ModuleLoader.$moduleid$.dll" />
       <SubModuleClassType value="Bannerlord.ModuleLoader.SubModule" />
       <Tags>
         <Tag key="LoaderFilter" value ="$moduleid$.*.dll" />
