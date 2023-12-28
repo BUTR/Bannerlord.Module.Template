@@ -46,7 +46,7 @@
 <!--#endif -->
   </DependedModules>
   <!-- Community Dependency Metadata -->
-  <!-- https://github.com/BUTR/Bannerlord.BLSE#for-modders -->
+  <!-- https://github.com/BUTR/Bannerlord.BLSE#community-dependency-metadata -->
   <DependedModuleMetadatas>
 <!--#if (ReferenceHarmony) -->
     <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="v2.2.2" />
