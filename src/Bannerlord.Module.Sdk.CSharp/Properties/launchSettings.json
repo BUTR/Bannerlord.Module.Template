@@ -3,14 +3,14 @@
     "Bannerlord": {
       "commandName": "Executable",
       "executablePath": "$(GameFolder)\\bin\\$(GameBinariesFolder)\\Bannerlord.exe",
-      "commandLineArgs": "/singleplayer _MODULES_*//#if(RunHarmony)Bannerlord.Harmony*//#endif//#if(RunButterLib)Bannerlord.ButterLib*//#endif//#if(RunUIExtenderEx)Bannerlord.UIExtenderEx*//#endif//#if(RunMCM)Bannerlord.MBOptionScreen*//#endifNative*SandBoxCore*CustomBattle*Sandbox*StoryMode*$(ModuleName)*_MODULES_",
+      "commandLineArgs": "/singleplayer _MODULES_*//#if(RunHarmony)Bannerlord.Harmony*//#endif//#if(RunButterLib)Bannerlord.ButterLib*//#endif//#if(RunUIExtenderEx)Bannerlord.UIExtenderEx*//#endif//#if(RunMCM)Bannerlord.MBOptionScreen*//#endifNative*SandBoxCore*CustomBattle*Sandbox*StoryMode*$(ModuleId)*_MODULES_",
       "workingDirectory": "$(GameFolder)\\bin\\$(GameBinariesFolder)"
     },
-    
+
     "BLSE Bannerlord": {
       "commandName": "Executable",
       "executablePath": "$(GameFolder)\\bin\\$(GameBinariesFolder)\\Bannerlord.BLSE.Standalone.exe",
-      "commandLineArgs": "/singleplayer _MODULES_*//#if(RunHarmony)Bannerlord.Harmony*//#endif//#if(RunButterLib)Bannerlord.ButterLib*//#endif//#if(RunUIExtenderEx)Bannerlord.UIExtenderEx*//#endif//#if(RunMCM)Bannerlord.MBOptionScreen*//#endifNative*SandBoxCore*CustomBattle*Sandbox*StoryMode*$(ModuleName)*_MODULES_",
+      "commandLineArgs": "/singleplayer _MODULES_*//#if(RunHarmony)Bannerlord.Harmony*//#endif//#if(RunButterLib)Bannerlord.ButterLib*//#endif//#if(RunUIExtenderEx)Bannerlord.UIExtenderEx*//#endif//#if(RunMCM)Bannerlord.MBOptionScreen*//#endifNative*SandBoxCore*CustomBattle*Sandbox*StoryMode*$(ModuleId)*_MODULES_",
       "workingDirectory": "$(GameFolder)\\bin\\$(GameBinariesFolder)"
     }
   }
