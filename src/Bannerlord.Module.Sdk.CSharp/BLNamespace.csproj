@@ -1,13 +1,13 @@
-<Project Sdk="Bannerlord.BUTRModule.Sdk/1.1.0.103">
+<Project Sdk="Bannerlord.BUTRModule.Sdk/1.1.0.104">
 
   <PropertyGroup>
     <Version>0.0.1</Version>
 <!--#if (gameWindows && gameWindowsStore) -->
-    <TargetFrameworks>net472;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>net472;net6</TargetFrameworks>
 <!--#elseif (gameWindows && !gameWindowsStore) -->
     <TargetFramework>net472</TargetFramework>
 <!--#elseif (!gameWindows && gameWindowsStore) -->
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6</TargetFramework>
 <!--#endif -->
     <Platforms>x64</Platforms>
     <LangVersion Condition="'$(langVersion)' != ''">$(ProjectLanguageVersion)</LangVersion>
@@ -31,7 +31,7 @@
   </PropertyGroup>
 <!--#endif -->
 <!--#if (gameWindowsStore) -->
-  <PropertyGroup Condition="$(TargetFramework) == 'netcoreapp3.1'">
+  <PropertyGroup Condition="$(TargetFramework) == 'net6'">
     <!-- Xbox Game Pass PC version of the game -->
     <BuildForWindowsStore>false</BuildForWindowsStore>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>

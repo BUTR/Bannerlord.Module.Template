@@ -38,7 +38,7 @@
     <DependedModule Id="CustomBattle" DependentVersion="$gameversion$" />
   </DependedModules>
   <!-- Community Dependency Metadata -->
-  <!-- https://github.com/BUTR/Bannerlord.BLSE#for-modders -->
+  <!-- https://github.com/BUTR/Bannerlord.BLSE#community-dependency-metadata -->
   <DependedModuleMetadatas>
 <!--#if (ReferenceHarmony) -->
     <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="v$harmonyversion$" />
@@ -77,8 +77,8 @@
     <!-- Bannerlord Module Loader. Do not change the name! -->
     <SubModule>
       <Name value="Bannerlord Module Loader" />
-      <DLLName value="Bannerlord.ModuleLoader.dll" />
-      <SubModuleClassType value="Bannerlord.ModuleLoader.SubModule" />
+      <DLLName value="Bannerlord.ModuleLoader.$moduleid$.dll" />
+      <SubModuleClassType value="Bannerlord.ModuleLoader.$moduleid$" />
       <Tags>
         <Tag key="LoaderFilter" value ="$moduleid$.*.dll" />
       </Tags>
