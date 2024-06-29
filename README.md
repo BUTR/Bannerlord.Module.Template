@@ -4,7 +4,7 @@
    <img src="https://img.shields.io/nuget/v/Bannerlord.Templates.svg?label=NuGet%20Bannerlord.Templates&colorB=blue" /></a>
 </p>
 <p>
-   <img src=“resources/installation.png” raw=true alt=“Installation” />
+   <img src="https://raw.githubusercontent.com/BUTR/Bannerlord.Module.Template/master/resources/installation.png" alt="Installation" style="width: 800px" />
 </p>
 
 ## Installation
