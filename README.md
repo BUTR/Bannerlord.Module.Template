@@ -4,7 +4,7 @@
    <img src="https://img.shields.io/nuget/v/Bannerlord.Templates.svg?label=NuGet%20Bannerlord.Templates&colorB=blue" /></a>
 </p>
 <p>
-   <img src="https://media.discordapp.net/attachments/422092475163869201/1094210967069524099/image.png" width="800">
+   <img src=“resources/installation.png” raw=true alt=“Installation” />
 </p>
 
 ## Installation
