@@ -10,8 +10,15 @@
     "BLSE Bannerlord": {
       "commandName": "Executable",
       "executablePath": "$(GameFolder)\\bin\\$(GameBinariesFolder)\\Bannerlord.BLSE.Standalone.exe",
-      "commandLineArgs": "/singleplayer _MODULES_*//#if(RunHarmony)Bannerlord.Harmony*//#endif//#if(RunButterLib)Bannerlord.ButterLib*//#endif//#if(RunUIExtenderEx)Bannerlord.UIExtenderEx*//#endif//#if(RunMCM)Bannerlord.MBOptionScreen*//#endifNative*SandBoxCore*CustomBattle*Sandbox*StoryMode*$(ModuleId)*_MODULES_",
+      "commandLineArgs": "/disableautogenexceptions /singleplayer _MODULES_*//#if(RunHarmony)Bannerlord.Harmony*//#endif//#if(RunButterLib)Bannerlord.ButterLib*//#endif//#if(RunUIExtenderEx)Bannerlord.UIExtenderEx*//#endif//#if(RunMCM)Bannerlord.MBOptionScreen*//#endifNative*SandBoxCore*CustomBattle*Sandbox*StoryMode*$(ModuleId)*_MODULES_",
       "workingDirectory": "$(GameFolder)\\bin\\$(GameBinariesFolder)"
-    }
+    },
+
+    "BLSE Bannerlord With Crash Reporter": {
+      "commandName": "Executable",
+      "executablePath": "$(GameFolder)\\bin\\$(GameBinariesFolder)\\Bannerlord.BLSE.Standalone.exe",
+      "commandLineArgs": "/enablecrashhandlerwhendebuggerisattached /singleplayer _MODULES_*//#if(RunHarmony)Bannerlord.Harmony*//#endif//#if(RunButterLib)Bannerlord.ButterLib*//#endif//#if(RunUIExtenderEx)Bannerlord.UIExtenderEx*//#endif//#if(RunMCM)Bannerlord.MBOptionScreen*//#endifNative*SandBoxCore*CustomBattle*Sandbox*StoryMode*$(ModuleId)*_MODULES_",
+      "workingDirectory": "$(GameFolder)\\bin\\$(GameBinariesFolder)"
+    },
   }
 }
