@@ -10,6 +10,7 @@
     <TargetFramework>net6</TargetFramework>
 <!--#endif -->
     <Platforms>x64</Platforms>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <LangVersion Condition="'$(langVersion)' != ''">$(ProjectLanguageVersion)</LangVersion>
     <Nullable Condition="'$(nullable)' != ''">enable</Nullable>
     <BuildForWindows>false</BuildForWindows>
@@ -30,8 +31,7 @@
 <!--#endif -->
 <!--#if (gameWindowsStore) -->
   <PropertyGroup Condition="$(TargetFramework) == 'net6'">
-    <BuildForWindowsStore>false</BuildForWindowsStore>
-    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <BuildForWindowsStore>true</BuildForWindowsStore>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
   </PropertyGroup>
 <!--#endif -->

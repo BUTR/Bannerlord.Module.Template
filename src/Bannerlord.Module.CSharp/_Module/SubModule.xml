@@ -92,8 +92,8 @@
 <!--#endif -->
     <SubModule>
       <Name value="$modulename$" />
-      <DLLName value="$modulename$.dll" />
-      <SubModuleClassType value="$modulename$.SubModule" />
+      <DLLName value="$moduleid$.dll" />
+      <SubModuleClassType value="$moduleid$.SubModule" />
       <Tags />
     </SubModule>
   </SubModules>

@@ -10,6 +10,7 @@
     <TargetFramework>net6</TargetFramework>
 <!--#endif -->
     <Platforms>x64</Platforms>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <LangVersion Condition="'$(langVersion)' != ''">$(ProjectLanguageVersion)</LangVersion>
     <Nullable Condition="'$(nullable)' != ''">enable</Nullable>
 
@@ -33,8 +34,7 @@
 <!--#if (gameWindowsStore) -->
   <PropertyGroup Condition="$(TargetFramework) == 'net6'">
     <!-- Xbox Game Pass PC version of the game -->
-    <BuildForWindowsStore>false</BuildForWindowsStore>
-    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <BuildForWindowsStore>true</BuildForWindowsStore>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
   </PropertyGroup>
 <!--#endif -->
