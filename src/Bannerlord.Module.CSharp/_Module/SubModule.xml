@@ -49,16 +49,16 @@
   <!-- https://github.com/BUTR/Bannerlord.BLSE#community-dependency-metadata -->
   <DependedModuleMetadatas>
 <!--#if (ReferenceHarmony) -->
-    <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="v2.2.2" />
+    <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="v2.3.3" />
 <!--#endif -->
 <!--#if (ReferenceButterLib) -->
-    <DependedModuleMetadata id="Bannerlord.ButterLib" order="LoadBeforeThis" version="v2.8.0" />
+    <DependedModuleMetadata id="Bannerlord.ButterLib" order="LoadBeforeThis" version="v2.9.18" />
 <!--#endif -->
 <!--#if (ReferenceUIExtenderEx) -->
-    <DependedModuleMetadata id="Bannerlord.UIExtenderEx" order="LoadBeforeThis" version="v2.8.0" />
+    <DependedModuleMetadata id="Bannerlord.UIExtenderEx" order="LoadBeforeThis" version="v2.12.0" />
 <!--#endif -->
 <!--#if (ReferenceMCM) -->
-    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" version="v5.7.1" />
+    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" version="v5.10.2" />
 <!--#endif -->
 <!--#if (ReferenceReferenceAssemblies) -->
     <DependedModuleMetadata id="Native" order="LoadBeforeThis" version="$gameversion$.*" />
