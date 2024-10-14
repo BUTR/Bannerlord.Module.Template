@@ -68,7 +68,7 @@
     <Reference Include="$(GameFolder)\Modules\BirthAndDeath\bin\$(GameBinariesFolder)\*.dll">
       <HintPath>%(Identity)</HintPath>
       <Private>False</Private>
-    </Referencetrue>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
