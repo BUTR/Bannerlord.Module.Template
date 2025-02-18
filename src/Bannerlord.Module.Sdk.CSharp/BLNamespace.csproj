@@ -45,7 +45,7 @@
     <UIExtenderExVersion Condition="'$(ReferenceUIExtenderEx)' == 'true'">2.8.0</UIExtenderExVersion>
     <ButterLibVersion Condition="'$(ReferenceButterLib)' == 'true'">2.8.11</ButterLibVersion>
     <MCMVersion Condition="'$(ReferenceMCM)' == 'true'">5.9.1</MCMVersion>
-    <BUTRModuleLoaderVersion Condition="'$(ReferenceModuleLoader)' == 'true'">1.0.1.44</BUTRModuleLoaderVersion>
+    <BUTRModuleLoaderVersion Condition="'$(ReferenceModuleLoader)' == 'true'">1.0.1.50</BUTRModuleLoaderVersion>
     <HarmonyExtensionsVersion>3.2.0.77</HarmonyExtensionsVersion>
     <!--
     <BUTRSharedVersion>3.0.0.135</BUTRSharedVersion>
