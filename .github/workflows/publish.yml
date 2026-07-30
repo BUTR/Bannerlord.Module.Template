@@ -8,6 +8,11 @@ on:
       - 'src/**'
       - 'resources/**'
 
+permissions:
+  id-token: write
+  contents: read
+  packages: write
+
 env:
   # Disable the .NET logo in the console output.
   DOTNET_NOLOGO: true
@@ -33,8 +38,14 @@ jobs:
       run: dotnet pack src/Bannerlord.Templates.csproj -c Release -o ./packages
       shell: pwsh
 
+    - name: NuGet login (trusted publishing)
+      uses: NuGet/login@v1
+      id: nuget-login
+      with:
+        user: Aragas
+
     - name: Push to NuGet
-      run: dotnet nuget push "./packages/*.nupkg" -k ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push "./packages/*.nupkg" -k ${{ steps.nuget-login.outputs.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
       shell: pwsh
 
     - name: Push to GPR
